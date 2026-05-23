@@ -6,36 +6,37 @@ import { useRef } from "react";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import { FaLinkedinIn } from "react-icons/fa";
 
+/* Placeholder team — actualizar con datos reales del equipo Bosón */
 const team = [
   {
-    name: "Nicole Paetz",
-    role: "Founder & CEO",
-    bio: "Más de 15 años liderando transformaciones estratégicas en empresas e instituciones de América Latina.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=80",
-    linkedin: "#",
+    name: "Nombre Apellido",
+    role: "Fundadora & CEO",
+    bio: "Especialista en ingeniería estratégica de negocios. Diseña sistemas que convierten la estrategia en ejecución consistente.",
+    image: "/fotos-perfil/foto-perfil-01.png",
+    linkedin: "https://www.linkedin.com/company/boson-estrategia-negocios",
     accent: true,
   },
   {
-    name: "Matias Garcia",
-    role: "Director de Estrategia",
-    bio: "Especialista en planificación estratégica sostenible y modelos de inteligencia corporativa aplicada.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=80",
+    name: "Nombre Apellido",
+    role: "Estrategia de Negocios",
+    bio: "Especialista en modelos de negocio, estrategia competitiva y expansión de mercados en el Caribe y Centroamérica.",
+    image: "/fotos-perfil/foto-perfil-02.png",
     linkedin: "#",
     accent: false,
   },
   {
-    name: "Cristian Garcia",
-    role: "Director de Operaciones",
-    bio: "Experto en eficiencia operativa y transformación cultural con enfoque en resultados medibles y sostenibles.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=80",
+    name: "Nombre Apellido",
+    role: "Excelencia Operacional",
+    bio: "Experto en arquitectura de procesos, rediseño de cadena de valor e indicadores de desempeño organizacional.",
+    image: "/fotos-perfil/foto-perfil-03.png",
     linkedin: "#",
     accent: false,
   },
   {
-    name: "Valentina Reyes",
-    role: "Consultora de Transformación",
-    bio: "Consultora especializada en cierre de brechas de competencias y desarrollo del talento organizacional.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&auto=format&fit=crop&q=80",
+    name: "Nombre Apellido",
+    role: "Finanzas Corporativas",
+    bio: "Especialista en estructuras de capital, valoración de empresas y finanzas para grupos empresariales y holdings.",
+    image: "/fotos-perfil/foto-perfil-04.png",
     linkedin: "#",
     accent: false,
   },
@@ -72,20 +73,19 @@ function TeamCard({
           />
         </motion.div>
 
-        {/* Base gradient — always visible */}
-        <div className="absolute inset-0 bg-gradient-to-t from-caoba-primary via-caoba-primary/40 to-transparent" />
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-boson-primary via-boson-primary/40 to-transparent" />
 
-        {/* Hover overlay — slides up */}
+        {/* Hover overlay */}
         <motion.div
           initial={{ y: "100%" }}
           whileHover={{ y: "0%" }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute inset-0 flex flex-col justify-end bg-caoba-primary/90 p-6"
+          className="absolute inset-0 flex flex-col justify-end bg-boson-primary/90 p-6"
         >
-          {/* Gold accent bar at top of overlay */}
-          <div className="absolute inset-x-0 top-0 h-1 bg-caoba-accent" />
+          <div className="absolute inset-x-0 top-0 h-1 bg-boson-accent" />
 
-          <p className="mb-3 text-[10px] font-bold tracking-[0.22em] text-caoba-accent uppercase">
+          <p className="mb-3 text-[10px] font-bold tracking-[0.22em] text-boson-accent uppercase">
             {member.role}
           </p>
           <p className="mb-5 text-sm leading-relaxed text-white/70">
@@ -93,25 +93,27 @@ function TeamCard({
           </p>
           <a
             href={member.linkedin}
-            className="inline-flex w-fit items-center gap-2 border border-white/20 px-4 py-2 text-[10px] font-bold tracking-widest text-white/70 transition-colors hover:border-caoba-accent hover:text-caoba-accent uppercase"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-fit items-center gap-2 border border-white/20 px-4 py-2 text-[10px] font-bold tracking-widest text-white/70 transition-colors hover:border-boson-accent hover:text-boson-accent uppercase"
           >
             <FaLinkedinIn className="h-3 w-3" />
             LinkedIn
           </a>
         </motion.div>
 
-        {/* CEO accent: gold left border */}
+        {/* Accent left border for lead card */}
         {member.accent && (
-          <div className="absolute left-0 top-0 bottom-0 w-1 bg-caoba-accent" />
+          <div className="absolute left-0 top-0 bottom-0 w-1 bg-boson-accent" />
         )}
       </div>
 
-      {/* ── Name block (always visible below photo) ── */}
-      <div className="border-b border-white/10 bg-caoba-primary px-5 py-4 transition-colors group-hover:border-caoba-accent/40">
+      {/* ── Name block ── */}
+      <div className="border-b border-white/10 bg-boson-primary px-5 py-4 transition-colors group-hover:border-boson-accent/40">
         <p className="text-sm font-black tracking-wide text-white">
           {member.name}
         </p>
-        <p className="mt-0.5 text-[10px] font-medium tracking-[0.18em] text-caoba-accent uppercase">
+        <p className="mt-0.5 text-[10px] font-medium tracking-[0.18em] text-boson-accent uppercase">
           {member.role}
         </p>
       </div>
@@ -124,7 +126,7 @@ export function NosotrosTeamSection() {
   const inView = useInView(ref, { once: true, amount: 0.15 });
 
   return (
-    <section className="bg-caoba-bg-soft overflow-hidden py-24">
+    <section className="bg-boson-bg-soft overflow-hidden py-24">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* ── Header ── */}
@@ -134,16 +136,15 @@ export function NosotrosTeamSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
-              className="mb-5 text-xs font-bold tracking-[0.25em] text-caoba-accent uppercase"
+              className="mb-5 text-xs font-bold tracking-[0.25em] text-boson-accent uppercase"
             >
-              Las personas detrás de Caoba
-
+              Las personas detrás de Bosón
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-4xl font-light leading-tight text-caoba-heading md:text-5xl"
+              className="text-4xl font-light leading-tight text-boson-heading md:text-5xl"
             >
               Nuestro{" "}
               <strong className="font-black">equipo</strong>
@@ -156,16 +157,16 @@ export function NosotrosTeamSection() {
             transition={{ duration: 0.65, delay: 0.2 }}
             className="flex flex-col justify-end"
           >
-            <p className="text-sm leading-relaxed text-caoba-body">
-              Un equipo multidisciplinario con experiencia profunda en estrategia,
-              operaciones y transformación organizacional. Cada miembro aporta una
-              perspectiva única orientada a resultados reales.
+            <p className="text-sm leading-relaxed text-boson-body">
+              Un equipo con experiencia profunda en estrategia, operaciones, finanzas y
+              cultura organizacional. Cada miembro aporta rigor técnico orientado a
+              resultados reales — no a recomendaciones en papel.
             </p>
             <motion.div
               initial={{ scaleX: 0, originX: 0 }}
               animate={inView ? { scaleX: 1 } : {}}
               transition={{ duration: 0.7, delay: 0.35 }}
-              className="mt-6 h-px w-full bg-caoba-heading/15"
+              className="mt-6 h-px w-full bg-boson-heading/15"
             />
           </motion.div>
         </div>
@@ -173,7 +174,7 @@ export function NosotrosTeamSection() {
         {/* ── Cards grid ── */}
         <div className="grid grid-cols-2 gap-4 md:gap-5 lg:grid-cols-4">
           {team.map((member, i) => (
-            <TeamCard key={member.name} member={member} index={i} inView={inView} />
+            <TeamCard key={`${member.name}-${i}`} member={member} index={i} inView={inView} />
           ))}
         </div>
 
@@ -182,11 +183,11 @@ export function NosotrosTeamSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.75 }}
-          className="mt-14 overflow-hidden bg-caoba-primary"
+          className="mt-14 overflow-hidden bg-boson-primary"
         >
           <div className="flex flex-col items-start justify-between gap-6 px-10 py-10 sm:flex-row sm:items-center">
             <div>
-              <p className="mb-1 text-[10px] font-bold tracking-[0.22em] text-caoba-accent uppercase">
+              <p className="mb-1 text-[10px] font-bold tracking-[0.22em] text-boson-accent uppercase">
                 Únete al equipo
               </p>
               <p className="text-xl font-light text-white">
@@ -196,14 +197,13 @@ export function NosotrosTeamSection() {
             </div>
             <a
               href="/contacto"
-              className="inline-flex shrink-0 items-center gap-3 bg-caoba-accent px-7 py-3.5 text-xs font-black uppercase tracking-widest text-caoba-primary-dark transition-colors hover:bg-caoba-accent-hover"
+              className="inline-flex shrink-0 items-center gap-3 bg-boson-accent px-7 py-3.5 text-xs font-black uppercase tracking-widest text-boson-primary-dark transition-colors hover:bg-boson-accent-hover"
             >
               Contáctanos
               <HiOutlineArrowRight className="h-4 w-4" />
             </a>
           </div>
-          {/* Gold bottom line */}
-          <div className="h-1 w-full bg-caoba-accent" />
+          <div className="h-1 w-full bg-boson-accent" />
         </motion.div>
 
       </div>

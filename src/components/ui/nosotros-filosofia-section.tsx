@@ -6,19 +6,19 @@ import { motion, useInView } from "framer-motion";
 
 const pillars = [
   {
-    title: "Pasión por la estrategia",
+    title: "Rigor Técnico",
     description:
-      "Creemos en el poder de una estrategia bien diseñada para impulsar el éxito organizacional.",
+      "No asesoramos desde afuera. Diseñamos desde adentro, con metodología probada y pensamiento sistémico. Cada modelo que construimos tiene que funcionar y sostenerse — no solo en papel, sino en la operación real.",
   },
   {
-    title: "Pensamiento estratégico",
+    title: "Inteligencia Aplicada",
     description:
-      "Valoramos el desarrollo continuo de habilidades estratégicas en los equipos, capacitándolos para tomar decisiones informadas.",
+      "Cada decisión tiene un sustento. La investigación de mercado, el análisis del entorno y los datos accionables no son un módulo adicional — son la base de todo lo que construimos.",
   },
   {
-    title: "Adaptabilidad y resiliencia",
+    title: "Visión Sistémica",
     description:
-      "Fomentamos una cultura de resiliencia y adaptabilidad para que las empresas prosperen en cualquier circunstancia.",
+      "Estrategia, operaciones, finanzas y mercado son partes de un mismo sistema. Los intervenimos de forma integrada. No por partes, no por silos.",
   },
 ];
 
@@ -29,7 +29,7 @@ function AnimatedCheck({ inView, delay }: { inView: boolean; delay: number }) {
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
         <motion.circle
           cx="10" cy="10" r="9"
-          stroke="#d4a020"
+          stroke="#26C0CF"
           strokeWidth="1.5"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={inView ? { pathLength: 1, opacity: 1 } : {}}
@@ -37,7 +37,7 @@ function AnimatedCheck({ inView, delay }: { inView: boolean; delay: number }) {
         />
         <motion.path
           d="M6 10l3 3 5-5"
-          stroke="#d4a020"
+          stroke="#26C0CF"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -56,7 +56,7 @@ export function NosotrosFilosofiaSection() {
   const inView = useInView(triggerRef, { once: true, amount: 0.4 });
 
   return (
-    <section className="bg-caoba-bg-soft overflow-hidden py-24">
+    <section className="bg-boson-bg-soft overflow-hidden py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
 
@@ -67,10 +67,10 @@ export function NosotrosFilosofiaSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-6 text-4xl font-light leading-tight text-caoba-heading lg:text-5xl"
+              className="mb-6 text-4xl font-light leading-tight text-boson-heading lg:text-5xl"
             >
-              Filosofía{" "}
-              <strong className="font-black">de trabajo</strong>
+              Pilares de{" "}
+              <strong className="font-black">la marca</strong>
             </motion.h2>
 
             <motion.p
@@ -78,12 +78,12 @@ export function NosotrosFilosofiaSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.85, delay: 0.2, ease: "easeOut" }}
-              className="mb-10 text-sm leading-relaxed text-caoba-body"
+              className="mb-10 text-sm leading-relaxed text-boson-body"
             >
-              Transformamos la manera en la que las organizaciones piensan sobre
-              su desarrollo estratégico. Cada empresa tiene un potencial único que
-              necesita una estrategia hecha a medida, con un enfoque en la
-              formación continua de su equipo para generar impacto duradero.
+              El lenguaje de Bosón no busca inspirar: busca clarificar, estructurar y mover a la
+              acción. Cada palabra lleva el peso de la evidencia detrás. Visualmente, los elementos
+              de la marca proyectan la misma precisión que los sistemas que diseñamos: nada sobra,
+              nada falta.
             </motion.p>
 
             <div ref={triggerRef}>
@@ -91,7 +91,7 @@ export function NosotrosFilosofiaSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.8 }}
-                className="mb-8 text-2xl font-light text-caoba-heading"
+                className="mb-8 text-2xl font-light text-boson-heading"
               >
                 Nuestros <strong className="font-black">Pilares</strong>
               </motion.p>
@@ -111,10 +111,10 @@ export function NosotrosFilosofiaSection() {
                   >
                     <AnimatedCheck inView={inView} delay={0.3 + i * 0.25} />
                     <div>
-                      <p className="mb-1 text-xs font-black uppercase tracking-[0.18em] text-caoba-heading">
+                      <p className="mb-1 text-xs font-black uppercase tracking-[0.18em] text-boson-heading">
                         {p.title}
                       </p>
-                      <p className="text-xs leading-relaxed text-caoba-body">
+                      <p className="text-xs leading-relaxed text-boson-body">
                         {p.description}
                       </p>
                     </div>
@@ -133,14 +133,14 @@ export function NosotrosFilosofiaSection() {
             className="relative aspect-[4/3] overflow-hidden"
           >
             <Image
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&auto=format&fit=crop&q=80"
-              alt="Filosofía de trabajo Caoba"
+              src="/fotografias/figuras.jpeg"
+              alt="Filosofía de Bosón Ingeniería Estratégica de Negocios"
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 border border-caoba-accent/20" />
-            <div className="absolute bottom-0 left-0 h-12 w-1 bg-caoba-accent" />
-            <div className="absolute bottom-0 left-0 h-1 w-12 bg-caoba-accent" />
+            <div className="absolute inset-0 border border-boson-accent/20" />
+            <div className="absolute bottom-0 left-0 h-12 w-1 bg-boson-accent" />
+            <div className="absolute bottom-0 left-0 h-1 w-12 bg-boson-accent" />
           </motion.div>
 
         </div>

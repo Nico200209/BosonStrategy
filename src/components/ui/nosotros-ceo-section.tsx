@@ -8,8 +8,8 @@ import { HiOutlineArrowRight } from "react-icons/hi";
 /* ── Name split: each word reveals from behind a mask ─────────────── */
 function SplitName({ inView }: { inView: boolean }) {
   const words = [
-    { text: "Nicole", bold: false },
-    { text: "Paetz",  bold: true  },
+    { text: "Nombre",   bold: false },
+    { text: "Apellido", bold: true  },
   ];
   return (
     <h2 className="mb-6 flex flex-wrap gap-x-4 text-5xl leading-tight text-white md:text-6xl lg:text-7xl">
@@ -34,7 +34,7 @@ export function NosotrosCEOSection() {
   const inView = useInView(ref, { once: true, amount: 0.25 });
 
   return (
-    <section className="bg-caoba-primary overflow-hidden py-24">
+    <section className="bg-boson-primary overflow-hidden py-24">
       <div ref={ref} className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[5fr_6fr]">
 
@@ -45,7 +45,7 @@ export function NosotrosCEOSection() {
               initial={{ scaleY: 0, originY: 1 }}
               animate={inView ? { scaleY: 1 } : {}}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute -bottom-6 -left-6 h-full w-full bg-caoba-primary-dark"
+              className="absolute -bottom-6 -left-6 h-full w-full bg-boson-primary-dark"
             />
 
             {/* Photo */}
@@ -56,27 +56,26 @@ export function NosotrosCEOSection() {
               className="relative aspect-[3/4] overflow-hidden"
             >
               <Image
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80"
-                alt="Nicole Paetz — Founder Caoba Consulting & Investment"
+                src="/fotos-perfil/foto-perfil-01.png"
+                alt="Fundadora de Bosón Ingeniería Estratégica de Negocios"
                 fill
                 className="object-cover object-top"
               />
-              {/* Subtle dark gradient at bottom */}
-              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-caoba-primary/60 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-boson-primary/60 to-transparent" />
             </motion.div>
 
-            {/* Gold corner accents */}
+            {/* Turquoise corner accents */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.9 }}
-              className="absolute bottom-0 right-0 h-16 w-1 bg-caoba-accent"
+              className="absolute bottom-0 right-0 h-16 w-1 bg-boson-accent"
             />
             <motion.div
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.5, delay: 1.0 }}
-              className="absolute bottom-0 right-0 h-1 w-16 bg-caoba-accent"
+              className="absolute bottom-0 right-0 h-1 w-16 bg-boson-accent"
             />
           </div>
 
@@ -88,11 +87,11 @@ export function NosotrosCEOSection() {
               initial={{ opacity: 0, scale: 0.85 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-6 inline-flex items-center gap-2 border border-caoba-primary/20 bg-caoba-primary px-3 py-1.5"
+              className="mb-6 inline-flex items-center gap-2 border border-boson-primary-light/20 bg-boson-primary-light px-3 py-1.5"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-caoba-accent" />
+              <span className="h-1.5 w-1.5 rounded-full bg-boson-accent" />
               <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white">
-                CEO Caoba
+                Fundadora · Bosón
               </span>
             </motion.div>
 
@@ -101,9 +100,9 @@ export function NosotrosCEOSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-4 text-[11px] font-bold tracking-[0.25em] text-caoba-accent uppercase"
+              className="mb-4 text-[11px] font-bold tracking-[0.25em] text-boson-accent uppercase"
             >
-              Founder Caoba Consulting &amp; Investment
+              Fundadora · Bosón Ingeniería Estratégica de Negocios
             </motion.p>
 
             {/* Name — split-word reveal */}
@@ -114,7 +113,7 @@ export function NosotrosCEOSection() {
               initial={{ scaleX: 0, originX: 0 }}
               animate={inView ? { scaleX: 1 } : {}}
               transition={{ duration: 0.7, delay: 0.6 }}
-              className="mb-8 h-px w-24 bg-caoba-accent"
+              className="mb-8 h-px w-24 bg-boson-accent"
             />
 
             {/* Bio */}
@@ -124,11 +123,11 @@ export function NosotrosCEOSection() {
               transition={{ duration: 0.7, delay: 0.7 }}
               className="mb-10 max-w-lg text-base leading-relaxed text-white/70"
             >
-              Como fundadora de{" "}
-              <strong className="font-black text-white">Caoba</strong>
-              , trabajo con empresas e instituciones para cerrar brechas de
-              competencias y fortalecer el desarrollo organizacional, creando
-              soluciones prácticas y sostenibles a largo plazo.
+              {/* Placeholder — actualizar con bio real de la fundadora */}
+              Especialista en ingeniería estratégica de negocios con trayectoria en el diseño de
+              sistemas que convierten la estrategia en ejecución consistente. Fundadora de{" "}
+              <strong className="font-black text-white">Bosón</strong>
+              , firma líder en consultoría estratégica en República Dominicana y el Caribe.
             </motion.p>
 
             {/* CTA */}
@@ -139,9 +138,9 @@ export function NosotrosCEOSection() {
             >
               <a
                 href="/contacto"
-                className="inline-flex items-center gap-3 rounded-sm bg-caoba-accent px-7 py-3.5 text-xs font-black uppercase tracking-widest text-caoba-primary-dark transition-colors hover:bg-caoba-accent-hover"
+                className="inline-flex items-center gap-3 rounded-sm bg-boson-accent px-7 py-3.5 text-xs font-black uppercase tracking-widest text-boson-primary-dark transition-colors hover:bg-boson-accent-hover"
               >
-                Solicita tu asesoría
+                Agenda una conversación
                 <HiOutlineArrowRight className="h-4 w-4" />
               </a>
             </motion.div>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1080 1080">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #26c0cf;
+      }
+
+      .st0, .st1 {
+        fill-rule: evenodd;
+      }
+
+      .st1 {
+        fill: #26304c;
+      }
+    </style>
+  </defs>
+  <g id="shield-privacy-tip-info--shield-privacy-tip-info-security-protection">
+    <path id="Union" class="st1" d="M218.37,147.45c-53.29,0-96.49,43.2-96.49,96.49v172.1c0,256.8,164.32,484.78,407.94,565.99,6.6,2.21,13.74,2.21,20.34,0,243.62-81.2,407.94-309.19,407.94-565.99v-172.1c0-53.29-43.2-96.49-96.49-96.49H218.37Z"/>
+    <path id="Union_2" class="st0" d="M588.24,332.38c0-26.64-21.6-48.24-48.24-48.24s-48.24,21.6-48.24,48.24v209.06c0,26.64,21.6,48.24,48.24,48.24s48.24-21.6,48.24-48.24v-209.06ZM540,782.66c35.53,0,64.33-28.8,64.33-64.33s-28.8-64.33-64.33-64.33-64.33,28.8-64.33,64.33,28.8,64.33,64.33,64.33Z"/>
+  </g>
+</svg>

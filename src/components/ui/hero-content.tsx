@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaChevronRight, FaFacebook, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaChevronRight, FaLinkedinIn } from "react-icons/fa";
 
 const socialLinks = [
-  { icon: FaFacebook, href: "#" },
-  { icon: FaLinkedinIn, href: "#" },
-  { icon: FaInstagram, href: "#" },
+  {
+    icon: FaLinkedinIn,
+    href: "https://www.linkedin.com/company/boson-estrategia-negocios",
+    label: "LinkedIn de Bosón",
+  },
 ];
 
 export function HeroContent() {
@@ -18,9 +20,9 @@ export function HeroContent() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-4 border-b border-caoba-accent pb-2 text-xs font-bold tracking-[0.3em] text-caoba-accent uppercase"
+          className="mb-4 border-b border-boson-accent pb-2 text-xs font-bold tracking-[0.3em] text-boson-accent uppercase"
         >
-          Bienvenido a Caoba Consulting &amp; Investment
+          República Dominicana
         </motion.p>
 
         <motion.h1
@@ -29,7 +31,7 @@ export function HeroContent() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="max-w-4xl text-5xl font-extrabold leading-tight text-white md:text-6xl lg:text-7xl"
         >
-          Tu socio estratégico para
+          Convertimos la estrategia
         </motion.h1>
 
         <motion.p
@@ -38,30 +40,41 @@ export function HeroContent() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-4 max-w-3xl text-xl font-light text-white/85 md:text-2xl"
         >
-          diagnosticar, definir y alinear el rumbo de tu organización
+          en ejecución consistente
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+          className="mt-5 max-w-2xl text-sm font-light text-white/55 md:text-base"
+        >
+          Desarrollamos e implementamos sistemas estratégicos de negocio que permiten a las
+          organizaciones operar mejor, crecer con estructura y escalar con consistencia.
         </motion.p>
 
         <motion.a
-          href="#contacto"
+          href="/contacto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-10 inline-flex items-center gap-2 rounded-full bg-caoba-accent px-8 py-4 text-xs font-bold tracking-widest text-caoba-primary uppercase transition-colors hover:bg-caoba-accent-hover"
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-10 inline-flex items-center gap-2 rounded-full bg-boson-accent px-8 py-4 text-xs font-bold tracking-widest text-boson-primary uppercase transition-colors hover:bg-boson-accent-hover"
         >
-          Agenda una reunión con nuestro equipo
+          Solicita una consulta estratégica
           <FaChevronRight className="h-3 w-3" />
         </motion.a>
       </div>
 
       {/* Social links */}
       <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 items-center gap-4">
-        {socialLinks.map(({ icon: Icon, href }, i) => (
+        {socialLinks.map(({ icon: Icon, href, label }) => (
           <a
-            key={i}
+            key={href}
             href={href}
+            aria-label={label}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-white/60 transition-colors hover:border-caoba-accent hover:text-caoba-accent"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 text-white/60 transition-colors hover:border-boson-accent hover:text-boson-accent"
           >
             <Icon className="h-3.5 w-3.5" />
           </a>

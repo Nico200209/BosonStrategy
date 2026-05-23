@@ -83,7 +83,7 @@ export const MinimalistHero = ({
   return (
     <div
       className={cn(
-        "relative flex min-h-screen w-full flex-col overflow-hidden bg-caoba-primary font-sans",
+        "relative flex min-h-screen w-full flex-col overflow-hidden bg-boson-primary font-sans",
         className
       )}
     >
@@ -101,7 +101,7 @@ export const MinimalistHero = ({
         >
           <span className="text-2xl font-bold tracking-wide text-white">{logoText}</span>
           {logoSubtext && (
-            <span className="text-[10px] font-medium tracking-[0.25em] text-caoba-accent uppercase">
+            <span className="text-[10px] font-medium tracking-[0.25em] text-boson-accent uppercase">
               {logoSubtext}
             </span>
           )}
@@ -122,7 +122,7 @@ export const MinimalistHero = ({
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="hidden items-center gap-2 rounded-full bg-caoba-accent px-5 py-2.5 text-xs font-bold tracking-widest text-caoba-primary uppercase transition-colors hover:bg-caoba-accent-hover md:flex"
+          className="hidden items-center gap-2 rounded-full bg-boson-accent px-5 py-2.5 text-xs font-bold tracking-widest text-boson-primary uppercase transition-colors hover:bg-boson-accent-hover md:flex"
         >
           {ctaLabel}
           <span>→</span>
@@ -143,7 +143,7 @@ export const MinimalistHero = ({
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute inset-x-0 top-20 z-40 flex flex-col gap-5 bg-caoba-primary-dark px-8 py-6 md:hidden"
+          className="absolute inset-x-0 top-20 z-40 flex flex-col gap-5 bg-boson-primary-dark px-8 py-6 md:hidden"
         >
           {navLinks.map((link) => (
             <NavLink key={link.label} href={link.href}>
@@ -152,7 +152,7 @@ export const MinimalistHero = ({
           ))}
           <a
             href={ctaHref}
-            className="mt-2 inline-block rounded-full bg-caoba-accent px-5 py-2.5 text-center text-xs font-bold tracking-widest text-caoba-primary uppercase"
+            className="mt-2 inline-block rounded-full bg-boson-accent px-5 py-2.5 text-center text-xs font-bold tracking-widest text-boson-primary uppercase"
           >
             {ctaLabel}
           </a>
@@ -169,13 +169,13 @@ export const MinimalistHero = ({
           transition={{ duration: 0.6, delay: 0.9 }}
           className="z-20 mb-8 text-center md:mb-0 md:pb-24 md:text-left"
         >
-          <div className="mb-3 h-px w-10 bg-caoba-accent mx-auto md:mx-0" />
+          <div className="mb-3 h-px w-10 bg-boson-accent mx-auto md:mx-0" />
           <p className="text-sm leading-relaxed text-white/70 max-w-[240px] mx-auto md:mx-0">
             {mainText}
           </p>
           <a
             href={ctaHref}
-            className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest text-caoba-accent uppercase hover:text-caoba-accent-light transition-colors"
+            className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest text-boson-accent uppercase hover:text-boson-accent-light transition-colors"
           >
             Contáctanos <span>→</span>
           </a>
@@ -188,14 +188,14 @@ export const MinimalistHero = ({
             initial={{ scale: 0.7, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 h-[280px] w-[280px] rounded-full bg-caoba-accent/15 ring-1 ring-caoba-accent/30 md:h-[400px] md:w-[400px]"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 h-[280px] w-[280px] rounded-full bg-boson-accent/15 ring-1 ring-boson-accent/30 md:h-[400px] md:w-[400px]"
           />
           {/* Inner circle */}
           <motion.div
             initial={{ scale: 0.7, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 h-[200px] w-[200px] rounded-full bg-caoba-accent/20 md:h-[280px] md:w-[280px]"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 h-[200px] w-[200px] rounded-full bg-boson-accent/20 md:h-[280px] md:w-[280px]"
           />
           {/* Photo */}
           <motion.img
@@ -209,7 +209,7 @@ export const MinimalistHero = ({
             onError={(e) => {
               const t = e.target as HTMLImageElement;
               t.onerror = null;
-              t.src = "https://placehold.co/400x600/1a2f38/d4a020?text=Caoba";
+              t.src = "https://placehold.co/400x600/08111F/26C0CF?text=Boson";
             }}
           />
         </div>
@@ -224,7 +224,7 @@ export const MinimalistHero = ({
           <h1 className="text-5xl font-extrabold leading-none tracking-tight text-white md:text-6xl lg:text-7xl">
             {overlayText.part1}
             <br />
-            <span className="text-caoba-accent">{overlayText.part2}</span>
+            <span className="text-boson-accent">{overlayText.part2}</span>
           </h1>
         </motion.div>
       </div>
@@ -247,7 +247,7 @@ export const MinimalistHero = ({
           transition={{ duration: 0.5, delay: 1.4 }}
           className="flex items-center gap-2 text-xs font-medium tracking-widest text-white/50 uppercase"
         >
-          <span className="inline-block h-1 w-1 rounded-full bg-caoba-accent" />
+          <span className="inline-block h-1 w-1 rounded-full bg-boson-accent" />
           {locationText}
         </motion.div>
       </footer>

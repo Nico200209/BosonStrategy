@@ -8,27 +8,27 @@ import { HiOutlineArrowRight } from "react-icons/hi";
 const features = [
   {
     number: "01",
-    title: "Define tu norte estratégico",
+    title: "Ingeniería, no consultoría",
     description:
-      "Ayudamos a tu empresa a establecer una visión clara y alineada con los objetivos a largo plazo, para que cada paso esté orientado hacia el éxito.",
+      "No entregamos recomendaciones. Diseñamos e implementamos sistemas operativos que funcionan en la realidad del negocio.",
   },
   {
     number: "02",
-    title: "Transformación estratégica",
+    title: "Pensamiento Sistémico",
     description:
-      "Implementamos cambios estructurales y operativos que permiten a tu organización adaptarse y prosperar en un entorno dinámico y competitivo.",
+      "Integramos estrategia, operación, finanzas y mercado en un solo sistema coherente. No intervenimos por partes ni por silos.",
   },
   {
     number: "03",
-    title: "Soluciones sostenibles",
+    title: "Inteligencia Aplicada",
     description:
-      "Desarrollamos estrategias que no solo son efectivas en el corto plazo, sino que también aseguran el crecimiento y la estabilidad a largo plazo.",
+      "Cada decisión tiene sustento en datos y contexto. La investigación no es un módulo adicional — es la base de todo lo que construimos.",
   },
   {
     number: "04",
-    title: "Decisiones basadas en datos",
+    title: "Ejecución Real",
     description:
-      "Aplicamos inteligencia de negocios y análisis predictivo para tomar decisiones informadas, minimizando riesgos y maximizando oportunidades.",
+      "Cerramos la brecha entre estrategia y operación. El objetivo no es depender de Bosón — es que el sistema funcione sin nosotros.",
   },
 ];
 
@@ -37,24 +37,24 @@ export function AboutSection() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="nosotros" className="bg-caoba-primary overflow-hidden">
+    <section id="nosotros" className="bg-boson-primary overflow-hidden">
       <div ref={ref} className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr]">
 
-          {/* ── Left: sticky image panel ── */}
+          {/* ── Left: image panel ── */}
           <div className="relative min-h-[340px] lg:min-h-0">
             <Image
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop&q=80"
-              alt="Equipo Caoba Consulting"
+              src="/fotografias/oficina-blanca-3.jpeg"
+              alt="Bosón Ingeniería Estratégica de Negocios — equipo"
               fill
               className="object-cover"
             />
             {/* Dark tint */}
-            <div className="absolute inset-0 bg-caoba-primary/30" />
-            {/* Bottom gradient for text legibility */}
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-caoba-primary/90 to-transparent" />
-            {/* Gold right border accent */}
-            <div className="absolute right-0 top-0 bottom-0 w-1 bg-caoba-accent" />
+            <div className="absolute inset-0 bg-boson-primary/30" />
+            {/* Bottom gradient */}
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-boson-primary/90 to-transparent" />
+            {/* Turquoise right border accent */}
+            <div className="absolute right-0 top-0 bottom-0 w-1 bg-boson-accent" />
 
             {/* Floating label */}
             <motion.div
@@ -63,11 +63,11 @@ export function AboutSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="absolute bottom-8 left-8 right-8"
             >
-              <p className="text-xs font-bold tracking-[0.22em] text-caoba-accent uppercase mb-1">
-                Caoba Consulting &amp; Investment
+              <p className="text-xs font-bold tracking-[0.22em] text-boson-accent uppercase mb-1">
+                Bosón Ingeniería Estratégica de Negocios
               </p>
               <p className="text-white/80 text-xs leading-relaxed">
-                Más de 15 años transformando organizaciones en América Latina.
+                La ingeniería invisible que sostiene a las organizaciones.
               </p>
             </motion.div>
           </div>
@@ -82,8 +82,8 @@ export function AboutSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="mb-6 text-4xl font-light leading-tight text-white lg:text-5xl"
             >
-              Somos tu socio{" "}
-              <strong className="font-black">estratégico para el cambio</strong>
+              Ingeniería que convierte{" "}
+              <strong className="font-black">estrategia en sistema</strong>
             </motion.h2>
 
             <motion.p
@@ -92,8 +92,8 @@ export function AboutSection() {
               transition={{ duration: 0.55, delay: 0.2 }}
               className="mb-3 text-base leading-relaxed text-white/70"
             >
-              Desafiamos el status quo para que tu empresa no solo sobreviva,
-              sino que prospere en un mundo cambiante.
+              Bosón no es una firma que opina sobre el negocio. Es una firma que
+              diseña el sistema que lo hace funcionar.
             </motion.p>
 
             <motion.p
@@ -102,9 +102,9 @@ export function AboutSection() {
               transition={{ duration: 0.55, delay: 0.25 }}
               className="mb-10 text-sm leading-relaxed text-white/50"
             >
-              En Caoba, trabajamos contigo para definir un norte estratégico claro,
-              brindarte soluciones sostenibles y asegurarnos de que cada decisión
-              se base en datos precisos y relevantes.
+              Convertimos la estrategia en ejecución consistente, desarrollando e implementando
+              sistemas estratégicos de negocio que permiten a las organizaciones operar mejor,
+              crecer con estructura y escalar con consistencia.
             </motion.p>
 
             {/* Divider */}
@@ -125,8 +125,7 @@ export function AboutSection() {
                   transition={{ duration: 0.5, delay: 0.35 + i * 0.1 }}
                   className="group flex gap-4 border-b border-white/8 py-5 pr-6 last:border-0 sm:[&:nth-child(odd)]:border-r sm:[&:nth-child(odd)]:border-white/8 sm:[&:nth-child(even)]:pl-6"
                 >
-                  {/* Number */}
-                  <span className="mt-0.5 shrink-0 text-xs font-black tracking-widest text-caoba-accent">
+                  <span className="mt-0.5 shrink-0 text-xs font-black tracking-widest text-boson-accent">
                     {f.number}
                   </span>
                   <div>
@@ -148,10 +147,10 @@ export function AboutSection() {
               transition={{ duration: 0.5, delay: 0.75 }}
             >
               <a
-                href="#contacto"
-                className="inline-flex items-center gap-3 rounded-sm bg-caoba-accent px-6 py-3 text-xs font-black uppercase tracking-widest text-caoba-primary-dark transition-colors hover:bg-caoba-accent-hover"
+                href="/contacto"
+                className="inline-flex items-center gap-3 rounded-sm bg-boson-accent px-6 py-3 text-xs font-black uppercase tracking-widest text-boson-primary-dark transition-colors hover:bg-boson-accent-hover"
               >
-                Hablemos sobre tu proyecto
+                Solicita una consulta estratégica
                 <HiOutlineArrowRight className="h-4 w-4" />
               </a>
             </motion.div>
