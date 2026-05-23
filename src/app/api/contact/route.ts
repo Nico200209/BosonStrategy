@@ -10,7 +10,7 @@ function getResend(): Resend {
   return new Resend(key);
 }
 
-const TO_EMAIL = "mpaetz@bosonstrategy.com";
+const TO_EMAIL = "contacto@bosonstrategy.com";
 const FROM_EMAIL = "noreply@bosonstrategy.com";
 
 function sanitize(value: unknown): string {

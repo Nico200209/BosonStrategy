@@ -28,11 +28,11 @@ export default function ServiciosPage() {
       <div className="bg-boson-primary-dark">
         <div className="mx-auto flex max-w-7xl items-center justify-end gap-0 px-6 py-2 md:gap-0">
           <a
-            href="mailto:mpaetz@bosonstrategy.com"
+            href="mailto:contacto@bosonstrategy.com"
             className="flex items-center gap-1.5 border-r border-white/10 px-4 text-[11px] text-white/60 transition-colors hover:text-boson-accent-light"
           >
             <MdOutlineEmail className="h-3.5 w-3.5" />
-            mpaetz@bosonstrategy.com
+            contacto@bosonstrategy.com
           </a>
           <span className="flex items-center gap-1.5 pl-4 text-[11px] text-white/40">
             <IoLocationOutline className="h-3.5 w-3.5" />

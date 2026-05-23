@@ -19,8 +19,8 @@ const contactInfo = [
   {
     icon: MdOutlineEmail,
     label: "Email",
-    value: "mpaetz@bosonstrategy.com",
-    href: "mailto:mpaetz@bosonstrategy.com",
+    value: "contacto@bosonstrategy.com",
+    href: "mailto:contacto@bosonstrategy.com",
   },
   {
     icon: MdOutlineAccessTime,

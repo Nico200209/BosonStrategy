@@ -164,10 +164,10 @@ export function FooterSection() {
               <li className="flex items-center gap-3">
                 <HiOutlineEnvelope className="h-4 w-4 shrink-0 text-boson-accent" />
                 <a
-                  href="mailto:mpaetz@bosonstrategy.com"
+                  href="mailto:contacto@bosonstrategy.com"
                   className="text-xs text-white/55 transition-colors hover:text-white"
                 >
-                  mpaetz@bosonstrategy.com
+                  contacto@bosonstrategy.com
                 </a>
               </li>
             </ul>

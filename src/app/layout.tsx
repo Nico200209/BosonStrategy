@@ -82,7 +82,7 @@ const jsonLd = {
   "@type": "Organization",
   name: "Bosón Ingeniería Estratégica de Negocios",
   url: "https://www.bosonstrategy.com",
-  email: "mpaetz@bosonstrategy.com",
+  email: "contacto@bosonstrategy.com",
   description:
     "Firma de ingeniería estratégica de negocios especializada en convertir estrategia en ejecución consistente mediante sistemas operativos para organizaciones en el Caribe y Centroamérica.",
   address: {
