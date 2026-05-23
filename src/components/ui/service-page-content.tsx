@@ -10,7 +10,7 @@ import { services } from "@/lib/services-data";
 /* ── Hero ──────────────────────────────────────────────────────────────── */
 function ServiceHero({ service }: { service: Service }) {
   return (
-    <section className="relative flex min-h-[460px] items-end overflow-hidden bg-caoba-primary">
+    <section className="relative flex min-h-[460px] items-end overflow-hidden bg-boson-primary">
       <Image
         src={service.image}
         alt={service.name}
@@ -18,9 +18,9 @@ function ServiceHero({ service }: { service: Service }) {
         priority
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-caoba-primary/78" />
-      {/* Gold bottom accent */}
-      <div className="absolute inset-x-0 bottom-0 h-1 bg-caoba-accent" />
+      <div className="absolute inset-0 bg-boson-primary/78" />
+      {/* Turquoise bottom accent */}
+      <div className="absolute inset-x-0 bottom-0 h-1 bg-boson-accent" />
 
       {/* Decorative ghost number */}
       <motion.span
@@ -42,7 +42,7 @@ function ServiceHero({ service }: { service: Service }) {
         >
           <a href="/" className="transition-colors hover:text-white/70">Inicio</a>
           <span>/</span>
-          <a href="/#servicios" className="transition-colors hover:text-white/70">Nuestros Servicios</a>
+          <a href="/servicios" className="transition-colors hover:text-white/70">Nuestros Servicios</a>
           <span>/</span>
           <span className="text-white/70">{service.shortName}</span>
         </motion.div>
@@ -52,7 +52,7 @@ function ServiceHero({ service }: { service: Service }) {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-4 text-[11px] font-bold tracking-[0.25em] text-caoba-accent uppercase"
+          className="mb-4 text-[11px] font-bold tracking-[0.25em] text-boson-accent uppercase"
         >
           Servicio {service.number}
         </motion.p>
@@ -94,7 +94,7 @@ function ChallengeSection({ service }: { service: Service }) {
     .map((s) => s + "?");
 
   return (
-    <section className="overflow-hidden bg-caoba-bg-soft py-24">
+    <section className="overflow-hidden bg-boson-bg-soft py-24">
       <div ref={ref} className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[3fr_2fr]">
 
@@ -104,7 +104,7 @@ function ChallengeSection({ service }: { service: Service }) {
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6 }}
-              className="mb-8 text-xs font-bold tracking-[0.25em] text-caoba-accent uppercase"
+              className="mb-8 text-xs font-bold tracking-[0.25em] text-boson-accent uppercase"
             >
               El Desafío
             </motion.p>
@@ -118,8 +118,8 @@ function ChallengeSection({ service }: { service: Service }) {
                   transition={{ duration: 0.8, delay: 0.1 + i * 0.2, ease: [0.22, 1, 0.36, 1] }}
                   className="flex gap-5"
                 >
-                  <div className="mt-1 w-0.5 shrink-0 self-stretch bg-caoba-accent" />
-                  <p className="text-xl font-light leading-relaxed text-caoba-heading lg:text-2xl">
+                  <div className="mt-1 w-0.5 shrink-0 self-stretch bg-boson-accent" />
+                  <p className="text-xl font-light leading-relaxed text-boson-heading lg:text-2xl">
                     {part}
                   </p>
                 </motion.div>
@@ -134,15 +134,15 @@ function ChallengeSection({ service }: { service: Service }) {
             transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="hidden lg:flex items-center justify-center"
           >
-            <div className="relative flex h-52 w-52 items-center justify-center border border-caoba-accent/20">
-              <span className="select-none text-[100px] font-black leading-none text-caoba-accent/10">
+            <div className="relative flex h-52 w-52 items-center justify-center border border-boson-accent/20">
+              <span className="select-none text-[100px] font-black leading-none text-boson-accent/10">
                 {service.number}
               </span>
               {/* Corner accents */}
-              <div className="absolute left-0 top-0 h-7 w-0.5 bg-caoba-accent" />
-              <div className="absolute left-0 top-0 h-0.5 w-7 bg-caoba-accent" />
-              <div className="absolute bottom-0 right-0 h-7 w-0.5 bg-caoba-accent" />
-              <div className="absolute bottom-0 right-0 h-0.5 w-7 bg-caoba-accent" />
+              <div className="absolute left-0 top-0 h-7 w-0.5 bg-boson-accent" />
+              <div className="absolute left-0 top-0 h-0.5 w-7 bg-boson-accent" />
+              <div className="absolute bottom-0 right-0 h-7 w-0.5 bg-boson-accent" />
+              <div className="absolute bottom-0 right-0 h-0.5 w-7 bg-boson-accent" />
             </div>
           </motion.div>
 
@@ -157,7 +157,7 @@ function ServicesSidebar({ currentSlug }: { currentSlug: string }) {
   return (
     <div className="overflow-hidden border border-white/10">
       <div className="border-b border-white/10 px-6 py-4">
-        <p className="text-[10px] font-bold tracking-[0.22em] text-caoba-accent uppercase">
+        <p className="text-[10px] font-bold tracking-[0.22em] text-boson-accent uppercase">
           Nuestros Servicios
         </p>
       </div>
@@ -175,7 +175,7 @@ function ServicesSidebar({ currentSlug }: { currentSlug: string }) {
               {/* Active accent bar */}
               <div
                 className={`w-0.5 shrink-0 transition-colors ${
-                  active ? "bg-caoba-accent" : "bg-transparent group-hover:bg-caoba-accent/40"
+                  active ? "bg-boson-accent" : "bg-transparent group-hover:bg-boson-accent/40"
                 }`}
               />
               <div className="flex flex-1 items-center justify-between px-5 py-4">
@@ -187,7 +187,7 @@ function ServicesSidebar({ currentSlug }: { currentSlug: string }) {
                   {s.name}
                 </span>
                 {active && (
-                  <span className="ml-3 shrink-0 text-[10px] font-black text-caoba-accent">
+                  <span className="ml-3 shrink-0 text-[10px] font-black text-boson-accent">
                     {s.number}
                   </span>
                 )}
@@ -196,16 +196,16 @@ function ServicesSidebar({ currentSlug }: { currentSlug: string }) {
           );
         })}
       </div>
-      <div className="border-t border-white/10 bg-caoba-primary-dark p-6">
-        <p className="mb-1 text-[10px] font-bold tracking-[0.2em] text-caoba-accent uppercase">
+      <div className="border-t border-white/10 bg-boson-primary-dark p-6">
+        <p className="mb-1 text-[10px] font-bold tracking-[0.2em] text-boson-accent uppercase">
           ¿Tienes dudas?
         </p>
         <p className="mb-4 text-xs leading-relaxed text-white/50">
-          Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos.
+          Conversemos sobre los desafíos estratégicos de tu organización.
         </p>
         <a
           href="/contacto"
-          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/60 transition-colors hover:text-caoba-accent"
+          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/60 transition-colors hover:text-boson-accent"
         >
           Contáctanos
           <HiOutlineArrowRight className="h-3.5 w-3.5" />
@@ -221,7 +221,7 @@ function SolutionsSection({ service }: { service: Service }) {
   const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section className="overflow-hidden bg-caoba-primary py-24">
+    <section className="overflow-hidden bg-boson-primary py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[7fr_5fr]">
 
@@ -231,7 +231,7 @@ function SolutionsSection({ service }: { service: Service }) {
               initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
-              className="mb-3 text-xs font-bold tracking-[0.25em] text-caoba-accent uppercase"
+              className="mb-3 text-xs font-bold tracking-[0.25em] text-boson-accent uppercase"
             >
               Soluciones Especializadas
             </motion.p>
@@ -242,10 +242,9 @@ function SolutionsSection({ service }: { service: Service }) {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="mb-14 max-w-lg text-sm leading-relaxed text-white/55"
             >
-              Cada uno de nuestros servicios se complementa con soluciones diseñadas para abordar
-              desafíos específicos y potenciar el crecimiento estratégico de tu organización.
-              Adaptamos cada propuesta a las necesidades reales de tu empresa, garantizando
-              resultados medibles y sostenibles.
+              Cada solución está diseñada para abordar desafíos específicos e instalar sistemas
+              que permiten a tu organización operar con mayor consistencia, eficiencia y dirección
+              estratégica — no solo en el corto plazo, sino de forma sostenible.
             </motion.p>
 
             {/* Solutions */}
@@ -263,7 +262,7 @@ function SolutionsSection({ service }: { service: Service }) {
                   className="group flex gap-6 border-b border-white/8 py-8 last:border-0"
                 >
                   {/* Number */}
-                  <span className="w-10 shrink-0 text-4xl font-black leading-none text-caoba-accent/20 transition-colors group-hover:text-caoba-accent/50">
+                  <span className="w-10 shrink-0 text-4xl font-black leading-none text-boson-accent/20 transition-colors group-hover:text-boson-accent/50">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   {/* Text */}
@@ -291,9 +290,9 @@ function SolutionsSection({ service }: { service: Service }) {
             >
               <a
                 href="/contacto"
-                className="inline-flex items-center gap-3 bg-caoba-accent px-7 py-3.5 text-xs font-black uppercase tracking-widest text-caoba-primary-dark transition-colors hover:bg-caoba-accent-hover"
+                className="inline-flex items-center gap-3 bg-boson-accent px-7 py-3.5 text-xs font-black uppercase tracking-widest text-boson-primary-dark transition-colors hover:bg-boson-accent-hover"
               >
-                Solicita tu asesoría
+                Solicita una consulta estratégica
                 <HiOutlineArrowRight className="h-4 w-4" />
               </a>
             </motion.div>
@@ -318,13 +317,13 @@ function CTASection() {
   const inView = useInView(ref, { once: true, amount: 0.4 });
 
   return (
-    <section className="overflow-hidden bg-caoba-accent py-20">
+    <section className="overflow-hidden bg-boson-accent py-20">
       <div ref={ref} className="mx-auto max-w-7xl px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="mb-4 text-[10px] font-bold tracking-[0.25em] text-caoba-primary-dark/60 uppercase"
+          className="mb-4 text-[10px] font-bold tracking-[0.25em] text-boson-primary-dark/60 uppercase"
         >
           Siguiente Paso
         </motion.p>
@@ -332,18 +331,18 @@ function CTASection() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-5 text-3xl font-light leading-tight text-caoba-primary-dark md:text-4xl"
+          className="mb-5 text-3xl font-light leading-tight text-boson-primary-dark md:text-4xl"
         >
           ¿Listo para{" "}
-          <strong className="font-black">transformar tu organización?</strong>
+          <strong className="font-black">instalar el sistema que necesita tu organización?</strong>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.65, delay: 0.2 }}
-          className="mx-auto mb-10 max-w-md text-sm leading-relaxed text-caoba-primary-dark/65"
+          className="mx-auto mb-10 max-w-md text-sm leading-relaxed text-boson-primary-dark/65"
         >
-          Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos estratégicos.
+          Agenda una conversación con nuestro equipo y definamos juntos el punto de partida.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -352,9 +351,9 @@ function CTASection() {
         >
           <a
             href="/contacto"
-            className="inline-flex items-center gap-3 bg-caoba-primary-dark px-8 py-4 text-xs font-black uppercase tracking-widest text-white transition-colors hover:bg-caoba-primary"
+            className="inline-flex items-center gap-3 bg-boson-primary-dark px-8 py-4 text-xs font-black uppercase tracking-widest text-white transition-colors hover:bg-boson-primary"
           >
-            Solicita tu asesoría
+            Agenda una conversación
             <HiOutlineArrowRight className="h-4 w-4" />
           </a>
         </motion.div>

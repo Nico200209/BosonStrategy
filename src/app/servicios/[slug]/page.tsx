@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { NavbarClient } from "@/components/ui/navbar-client";
 import { FooterSection } from "@/components/ui/footer-section";
@@ -18,8 +18,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getServiceBySlug(slug);
   if (!service) return {};
   return {
-    title: `${service.name} — Caoba Consulting & Investment`,
+    title: service.name,
     description: service.tagline,
+    keywords: service.keywords,
+    openGraph: {
+      title: `${service.name} — Bosón Ingeniería Estratégica de Negocios`,
+      description: service.tagline,
+      url: `https://www.bosonstrategy.com/servicios/${service.slug}`,
+    },
+    alternates: {
+      canonical: `https://www.bosonstrategy.com/servicios/${service.slug}`,
+    },
   };
 }
 
@@ -31,21 +40,14 @@ export default async function ServicePage({ params }: Props) {
   return (
     <main>
       {/* ── Top strip ── */}
-      <div className="bg-caoba-primary-dark">
-        <div className="mx-auto flex max-w-7xl items-center justify-end px-6 py-2">
+      <div className="bg-boson-primary-dark">
+        <div className="mx-auto flex max-w-7xl items-center justify-end gap-0 px-6 py-2 md:gap-0">
           <a
-            href="mailto:info@caobaconsultores.com"
-            className="flex items-center gap-1.5 border-r border-white/10 px-4 text-[11px] text-white/60 transition-colors hover:text-caoba-accent-light"
+            href="mailto:mpaetz@bosonstrategy.com"
+            className="flex items-center gap-1.5 border-r border-white/10 px-4 text-[11px] text-white/60 transition-colors hover:text-boson-accent-light"
           >
             <MdOutlineEmail className="h-3.5 w-3.5" />
-            info@caobaconsultores.com
-          </a>
-          <a
-            href="tel:+18495077413"
-            className="flex items-center gap-1.5 border-r border-white/10 px-4 text-[11px] text-white/60 transition-colors hover:text-caoba-accent-light"
-          >
-            <MdOutlinePhone className="h-3.5 w-3.5" />
-            +1 (849) 507-7413
+            mpaetz@bosonstrategy.com
           </a>
           <span className="flex items-center gap-1.5 pl-4 text-[11px] text-white/40">
             <IoLocationOutline className="h-3.5 w-3.5" />
@@ -55,7 +57,7 @@ export default async function ServicePage({ params }: Props) {
       </div>
 
       {/* ── Navbar ── */}
-      <nav className="sticky top-0 z-50 bg-caoba-primary shadow-md">
+      <nav className="sticky top-0 z-50 bg-boson-primary shadow-md" aria-label="Navegación principal">
         <NavbarClient />
       </nav>
 

@@ -1,48 +1,48 @@
 @import "tailwindcss";
 
-/* ─── Caoba Brand Tokens ──────────────────────────────────────────── */
+/* ─── Bosón Brand Tokens ──────────────────────────────────────────── */
 :root {
   /* Primary palette */
-  --caoba-primary:        #1a2f38;   /* dark teal-navy  — navbar, footer, dark cards */
-  --caoba-primary-light:  #243d49;   /* lighter tint for hover states               */
-  --caoba-primary-dark:   #111e25;   /* darker shade for pressed/active states       */
+  --boson-primary:        #08111F;   /* navy oscuro — navbar, footer, dark cards      */
+  --boson-primary-light:  #26304C;   /* azul estructural — cards, secciones oscuras   */
+  --boson-primary-dark:   #050d18;   /* darker shade for pressed/active states        */
 
   /* Accent */
-  --caoba-accent:         #d4a020;   /* warm amber-gold — CTA buttons, highlights   */
-  --caoba-accent-hover:   #b88a18;   /* darker gold for hover                       */
-  --caoba-accent-light:   #f0c84a;   /* lighter gold tint                           */
+  --boson-accent:         #26C0CF;   /* turquesa — CTA buttons, highlights            */
+  --boson-accent-hover:   #1fa8b6;   /* turquesa oscuro para hover                    */
+  --boson-accent-light:   #6dd6e0;   /* turquesa claro — tints                        */
 
   /* Neutrals */
-  --caoba-bg:             #ffffff;   /* default page background                     */
-  --caoba-bg-soft:        #f5f7fa;   /* subtle section background                   */
-  --caoba-heading:        #1a2535;   /* dark heading text on light bg               */
-  --caoba-body:           #4b5563;   /* body / paragraph text                       */
-  --caoba-muted:          #9ca3af;   /* captions, secondary labels                  */
-  --caoba-border:         #e5e7eb;   /* dividers, card borders                      */
-  --caoba-white:          #ffffff;
+  --boson-bg:             #ffffff;   /* fondo claro                                   */
+  --boson-bg-soft:        #EBECED;   /* gris perla — secciones alternadas             */
+  --boson-heading:        #08111F;   /* texto headings sobre fondo claro              */
+  --boson-body:           #565554;   /* gray brown — texto cuerpo                     */
+  --boson-muted:          #9ca3af;   /* captions, secondary labels                    */
+  --boson-border:         #e5e7eb;   /* dividers, card borders                        */
+  --boson-white:          #ffffff;
 }
 
 /* ─── Tailwind v4 theme mapping ───────────────────────────────────── */
-@theme inline {
-  /* Expose brand tokens as Tailwind color utilities          */
-  /* e.g. bg-caoba-primary, text-caoba-accent, etc.          */
-  --color-caoba-primary:       var(--caoba-primary);
-  --color-caoba-primary-light: var(--caoba-primary-light);
-  --color-caoba-primary-dark:  var(--caoba-primary-dark);
-  --color-caoba-accent:        var(--caoba-accent);
-  --color-caoba-accent-hover:  var(--caoba-accent-hover);
-  --color-caoba-accent-light:  var(--caoba-accent-light);
-  --color-caoba-bg:            var(--caoba-bg);
-  --color-caoba-bg-soft:       var(--caoba-bg-soft);
-  --color-caoba-heading:       var(--caoba-heading);
-  --color-caoba-body:          var(--caoba-body);
-  --color-caoba-muted:         var(--caoba-muted);
-  --color-caoba-border:        var(--caoba-border);
-  --color-caoba-white:         var(--caoba-white);
+/* Direct hex values required — var() references break opacity modifiers */
+@theme {
+  --color-boson-primary:       #08111F;
+  --color-boson-primary-light: #26304C;
+  --color-boson-primary-dark:  #050d18;
+  --color-boson-accent:        #26C0CF;
+  --color-boson-accent-hover:  #1fa8b6;
+  --color-boson-accent-light:  #6dd6e0;
+  --color-boson-bg:            #ffffff;
+  --color-boson-bg-soft:       #EBECED;
+  --color-boson-heading:       #08111F;
+  --color-boson-body:          #565554;
+  --color-boson-muted:         #9ca3af;
+  --color-boson-border:        #e5e7eb;
+  --color-boson-white:         #ffffff;
 
   /* Fonts */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-body: var(--font-open-sans);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 /* ─── Marquee animation ───────────────────────────────────────────── */
@@ -59,8 +59,14 @@
 
 /* ─── Base styles ─────────────────────────────────────────────────── */
 body {
-  background: var(--caoba-bg);
-  color: var(--caoba-body);
-  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  background: var(--boson-bg);
+  color: var(--boson-body);
+  font-family: var(--font-body, var(--font-sans, Arial, Helvetica, sans-serif));
 }
 
+/* Headings in @layer base so Tailwind utilities (text-white, etc.) can override */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  }
+}

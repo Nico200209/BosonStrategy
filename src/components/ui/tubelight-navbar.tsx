@@ -62,10 +62,10 @@ export function TubelightNavBar({ items, className }: TubelightNavBarProps) {
                   initial={false}
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 >
-                  <div className="absolute -top-2 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-full bg-caoba-accent">
-                    <div className="absolute -left-2 -top-2 h-6 w-12 rounded-full bg-caoba-accent/20 blur-md" />
-                    <div className="absolute -top-1 h-6 w-8 rounded-full bg-caoba-accent/20 blur-md" />
-                    <div className="absolute left-2 top-0 h-4 w-4 rounded-full bg-caoba-accent/30 blur-sm" />
+                  <div className="absolute -top-2 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-full bg-boson-accent">
+                    <div className="absolute -left-2 -top-2 h-6 w-12 rounded-full bg-boson-accent/20 blur-md" />
+                    <div className="absolute -top-1 h-6 w-8 rounded-full bg-boson-accent/20 blur-md" />
+                    <div className="absolute left-2 top-0 h-4 w-4 rounded-full bg-boson-accent/30 blur-sm" />
                   </div>
                 </motion.div>
               )}

@@ -9,46 +9,44 @@ const features = [
     number: "01",
     title: "Nuestra Misión",
     description:
-      "Somos un socio estratégico para empresas e instituciones que necesitan definir y/o alinear su norte estratégico.",
+      "Convertimos la estrategia en ejecución consistente, desarrollando e implementando sistemas estratégicos de negocio que permiten a las organizaciones operar mejor, crecer con estructura y escalar con consistencia.",
   },
   {
     number: "02",
     title: "Nuestra Visión",
     description:
-      "Impulsar la transformación estratégica de empresas e instituciones, asegurando su éxito a largo plazo a través de un crecimiento sostenible y equipos preparados para los desafíos del futuro.",
+      "Ser la firma líder en el Caribe en ingeniería estratégica de negocios, reconocida por convertir el crecimiento empresarial en sistemas sólidos, escalables y consistentes.",
   },
 ];
 
 export function NosotrosIntroSection() {
-  // No scroll trigger — animates on mount since this section is
-  // visible immediately when the page loads.
   return (
-    <section className="bg-caoba-primary overflow-hidden">
+    <section className="bg-boson-primary overflow-hidden">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr]">
 
-          {/* ── Image panel — hidden on mobile to avoid duplicate with hero ── */}
+          {/* ── Image panel ── */}
           <div className="relative hidden min-h-[340px] lg:block lg:min-h-0">
             <Image
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop&q=80"
-              alt="Equipo Caoba Consulting"
+              src="/fotografias/oficina-blanca-1.jpeg"
+              alt="Bosón Ingeniería Estratégica de Negocios"
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-caoba-primary/30" />
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-caoba-primary/90 to-transparent" />
-            <div className="absolute right-0 top-0 bottom-0 w-1 bg-caoba-accent" />
+            <div className="absolute inset-0 bg-boson-primary/30" />
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-boson-primary/90 to-transparent" />
+            <div className="absolute right-0 top-0 bottom-0 w-1 bg-boson-accent" />
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               className="absolute bottom-8 left-8 right-8"
             >
-              <p className="text-xs font-bold tracking-[0.22em] text-caoba-accent uppercase mb-1">
-                Caoba Consulting &amp; Investment
+              <p className="text-xs font-bold tracking-[0.22em] text-boson-accent uppercase mb-1">
+                Bosón Ingeniería Estratégica de Negocios
               </p>
               <p className="text-white/80 text-xs leading-relaxed">
-                Más de 15 años transformando organizaciones en América Latina.
+                La ingeniería invisible que sostiene a las organizaciones.
               </p>
             </motion.div>
           </div>
@@ -60,9 +58,9 @@ export function NosotrosIntroSection() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-5 text-xs font-bold tracking-[0.25em] text-caoba-accent uppercase"
+              className="mb-5 text-xs font-bold tracking-[0.25em] text-boson-accent uppercase"
             >
-              Sobre Caoba Consulting &amp; Investment
+              Sobre Bosón
             </motion.p>
 
             <motion.h2
@@ -71,8 +69,8 @@ export function NosotrosIntroSection() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mb-6 text-4xl font-light leading-tight text-white lg:text-5xl"
             >
-              Somos tu{" "}
-              <strong className="font-black">socio estratégico</strong>
+              No somos consultores.{" "}
+              <strong className="font-black">Somos ingenieros de negocio.</strong>
             </motion.h2>
 
             <motion.p
@@ -81,8 +79,8 @@ export function NosotrosIntroSection() {
               transition={{ duration: 0.65, delay: 0.35 }}
               className="mb-3 text-base leading-relaxed text-white/70"
             >
-              Desafiamos el status quo para garantizar que nuestros clientes no solo
-              sobrevivan, sino que prosperen.
+              Las empresas crecen, pero sin rediseñar el sistema que las sostiene.
+              Por eso, muchas estrategias no se ejecutan con consistencia.
             </motion.p>
 
             <motion.p
@@ -91,8 +89,11 @@ export function NosotrosIntroSection() {
               transition={{ duration: 0.65, delay: 0.5 }}
               className="mb-10 text-sm leading-relaxed text-white/50"
             >
-              Somos un socio estratégico para empresas e instituciones que necesitan
-              definir y/o alinear su norte estratégico.
+              El nombre Bosón hace referencia al Bosón de Higgs — la partícula que da masa a las
+              demás. No tiene color, no tiene carga, no se puede tocar. Pero sin el campo que
+              genera, el universo no tendría estructura. Eso es lo que Bosón interviene: la
+              ingeniería que no se ve, pero que determina si una organización tiene peso real o
+              solo movimiento.
             </motion.p>
 
             <motion.div
@@ -111,7 +112,7 @@ export function NosotrosIntroSection() {
                   transition={{ duration: 0.6, delay: 0.75 + i * 0.15 }}
                   className="flex gap-4 border-b border-white/8 py-5 pr-6 last:border-0 sm:[&:nth-child(odd)]:border-r sm:[&:nth-child(odd)]:border-white/8 sm:[&:nth-child(even)]:pl-6"
                 >
-                  <span className="mt-0.5 shrink-0 text-xs font-black tracking-widest text-caoba-accent">
+                  <span className="mt-0.5 shrink-0 text-xs font-black tracking-widest text-boson-accent">
                     {f.number}
                   </span>
                   <div>
@@ -132,10 +133,10 @@ export function NosotrosIntroSection() {
               transition={{ duration: 0.6, delay: 1.05 }}
             >
               <a
-                href="/#contacto"
-                className="inline-flex items-center gap-3 rounded-sm bg-caoba-accent px-6 py-3 text-xs font-black uppercase tracking-widest text-caoba-primary-dark transition-colors hover:bg-caoba-accent-hover"
+                href="/contacto"
+                className="inline-flex items-center gap-3 rounded-sm bg-boson-accent px-6 py-3 text-xs font-black uppercase tracking-widest text-boson-primary-dark transition-colors hover:bg-boson-accent-hover"
               >
-                Hablemos sobre tu proyecto
+                Solicita una consulta estratégica
                 <HiOutlineArrowRight className="h-4 w-4" />
               </a>
             </motion.div>
