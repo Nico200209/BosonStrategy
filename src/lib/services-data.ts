@@ -136,7 +136,7 @@ export const services: Service[] = [
           "Mejora de la productividad no como reducción de costos, sino como rediseño del sistema que genera resultados con consistencia y menor dependencia de esfuerzo heroico.",
       },
     ],
-    image: "/fotografias/oficina-blanca-1.jpeg",
+    image: "/fotografias/procesos-operacionales.jpeg",
     keywords: [
       "excelencia operacional",
       "optimización de procesos",

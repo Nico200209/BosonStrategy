@@ -32,7 +32,7 @@ const services = [
     subtitle: "Procesos · Eficiencia · Escalabilidad",
     description:
       "Arquitectura de procesos, rediseño de la cadena de valor e indicadores de negocio. Modelos operativos construidos para el tamaño que se quiere alcanzar.",
-    image: "/fotografias/oficina-blanca-1.jpeg",
+    image: "/fotografias/procesos-operacionales.jpeg",
   },
   {
     number: "04",
@@ -82,14 +82,14 @@ function ServiceCard({
             className="object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 1280px) 33vw, 420px"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20" />
           <div className="absolute left-5 top-5 flex flex-col gap-0.5">
             <span className="text-[11px] font-bold tracking-[0.22em] text-boson-accent">
               {service.number}
             </span>
           </div>
           <div className="absolute bottom-0 left-0 right-0 p-6">
-            <p className="mb-1 text-[10px] font-medium tracking-wider text-boson-accent/70 uppercase">
+            <p className="mb-1 text-[10px] font-medium tracking-wider text-boson-accent uppercase">
               {service.subtitle}
             </p>
             <h3 className="mb-2 text-sm font-black uppercase leading-tight tracking-wide text-white">
