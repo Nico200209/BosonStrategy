@@ -132,9 +132,11 @@ export const services: Service[] = [
     shortName: "Excelencia Operacional",
     subtitle: "Procesos · Eficiencia · Escalabilidad",
     tagline:
-      "Rediseñamos el modelo operativo para que funcione en el tamaño que la organización quiere alcanzar, no en el que tenía.",
+      "Las empresas no se estancan por falta de talento. Se estancan porque su sistema operativo no fue diseñado para el tamaño que quieren alcanzar.",
     question:
-      "Las empresas crecen, pero sin rediseñar los procesos que las sostienen. El resultado es lo que llamamos 'crecimiento con heroísmo': dependencia de personas clave, procesos sin estandarizar y sistemas operativos que no fueron construidos para escalar.",
+      "¿El crecimiento de tu empresa depende de personas clave que hacen heroísmos, en lugar de procesos que funcionan solos? ¿Los mismos errores operacionales se repiten una y otra vez porque no hay sistemas estandarizados que los prevengan? ¿Cada vez que la empresa crece, la operación se vuelve más compleja y más difícil de gestionar, en lugar de más simple?",
+    solutionsIntro:
+      "Lo que muchas empresas llaman 'problemas de personas' son en realidad problemas de sistema. En Bosón diagnosticamos los vacíos estructurales que generan ineficiencia: procesos sin estandarizar, cadenas de valor con cuellos de botella y métricas que no reflejan la realidad operacional. Construimos la arquitectura de procesos que permite escalar sin heroísmos. El resultado no es eficiencia por eficiencia: es un sistema operativo diseñado para el tamaño que la organización proyecta alcanzar.",
     solutions: [
       {
         title: "Arquitectura de procesos y modelos operativos escalables",
@@ -154,8 +156,18 @@ export const services: Service[] = [
       {
         title: "Productividad y eficiencia operacional con enfoque estratégico",
         description:
-          "Mejora de la productividad no como reducción de costos, sino como rediseño del sistema que genera resultados con consistencia y menor dependencia de esfuerzo heroico.",
+          "Mejora de la productividad con criterio estratégico: no se optimiza todo, sino lo que genera mayor impacto en los resultados que la organización necesita producir.",
       },
+      {
+        title: "Modelos operativos diseñados para el tamaño que se quiere alcanzar",
+        description:
+          "La operación de hoy no puede ser la misma de mañana. Diseñamos el modelo operativo para el negocio que la empresa quiere ser, no para el que es hoy.",
+      },
+    ],
+    impactItems: [
+      "Procesos documentados y estandarizados que funcionan independientemente de quién los opere.",
+      "Indicadores que miden lo que realmente importa para la estrategia y la operación.",
+      "Una organización que puede crecer sin que cada nuevo nivel de escala genere más caos.",
     ],
     image: "/fotos-servicios/Servicio-3.jpg",
     keywords: [
