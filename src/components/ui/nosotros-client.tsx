@@ -36,7 +36,7 @@ const pillars = [
   {
     title: "Visión Sistémica",
     description:
-      "Estrategia, operaciones, finanzas y mercado son partes de un mismo sistema. Los intervenimos de forma integrada — no por partes, no por silos.",
+      "Estrategia, operaciones, finanzas y mercado son partes de un mismo sistema. Los intervenimos de forma integrada, no por partes, no por silos.",
   },
 ];
 

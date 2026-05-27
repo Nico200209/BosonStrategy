@@ -160,7 +160,7 @@ export function NosotrosTeamSection() {
             <p className="text-sm leading-relaxed text-boson-body">
               Un equipo con experiencia profunda en estrategia, operaciones, finanzas y
               cultura organizacional. Cada miembro aporta rigor técnico orientado a
-              resultados reales — no a recomendaciones en papel.
+              resultados reales, no a recomendaciones en papel.
             </p>
             <motion.div
               initial={{ scaleX: 0, originX: 0 }}
