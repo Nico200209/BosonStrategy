@@ -69,7 +69,7 @@ export function NavbarClient() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 6 }}
                   transition={{ duration: 0.18 }}
-                  className="absolute left-0 top-full z-50 mt-4 w-72 overflow-hidden bg-boson-primary-dark shadow-2xl"
+                  className="absolute left-0 top-full z-50 mt-4 w-72 overflow-hidden bg-boson-primary border border-white/10 shadow-2xl"
                 >
                   <div className="h-0.5 w-full bg-boson-accent" />
                   {serviceLinks.map((link) => (
@@ -117,7 +117,7 @@ export function NavbarClient() {
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col gap-1 bg-boson-primary-dark px-6 py-5 md:hidden"
+          className="flex flex-col gap-1 bg-boson-primary border-t border-boson-accent px-6 py-5 md:hidden"
         >
           <a href="/" onClick={() => setMobileOpen(false)} className="py-2 text-xs font-bold tracking-widest text-white/80 hover:text-white">
             INICIO
