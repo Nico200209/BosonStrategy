@@ -14,7 +14,7 @@ const services = [
     subtitle: "Modelos · Competitividad · Expansión",
     description:
       "Diseñamos el modelo de negocio que hace posible el siguiente nivel. Estrategia competitiva, expansión de mercados y portfolio de productos integrados en un solo sistema.",
-    image: "/fotografias/edificio-moderno.jpg",
+    image: "/fotos-servicios/Servicio-1.jpg",
   },
   {
     number: "02",
@@ -23,7 +23,7 @@ const services = [
     subtitle: "Inteligencia · Mercado · Análisis",
     description:
       "Cada decisión estratégica tiene que tener sustento. Inteligencia de mercado, investigación competitiva y análisis accionable como base de todo lo que construimos.",
-    image: "/fotografias/figuras.jpeg",
+    image: "/fotos-servicios/Servicio-2.jpg",
   },
   {
     number: "03",
@@ -32,7 +32,7 @@ const services = [
     subtitle: "Procesos · Eficiencia · Escalabilidad",
     description:
       "Arquitectura de procesos, rediseño de la cadena de valor e indicadores de negocio. Modelos operativos construidos para el tamaño que se quiere alcanzar.",
-    image: "/fotografias/procesos-operacionales.jpeg",
+    image: "/fotos-servicios/Servicio-3.jpg",
   },
   {
     number: "04",
@@ -41,7 +41,7 @@ const services = [
     subtitle: "Capital · Inversión · Sostenibilidad",
     description:
       "Estructuras de capital, valoración de negocio y estrategia financiera para grupos empresariales, holdings y procesos de transición generacional.",
-    image: "/fotografias/edificio-azul.jpeg",
+    image: "/fotos-servicios/Servicio-4.jpg",
   },
   {
     number: "05",
@@ -50,7 +50,7 @@ const services = [
     subtitle: "Arquitectura · Estrategia · Desempeño",
     description:
       "La cultura como variable estratégica. Diseñamos la arquitectura cultural que soporta el modelo de negocio que la organización quiere tener.",
-    image: "/fotografias/oficina-blanca-2.jpeg",
+    image: "/fotos-servicios/Servicio-5.jpg",
   },
 ];
 
@@ -84,7 +84,7 @@ function ServiceCard({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20" />
           <div className="absolute left-5 top-5 flex flex-col gap-0.5">
-            <span className="text-[13px] font-black tracking-[0.22em] text-boson-accent drop-shadow-[0_1px_4px_rgba(38,192,207,0.6)]">
+            <span className="text-[13px] font-black tracking-[0.22em] text-white drop-shadow-[0_0_6px_rgba(38,192,207,1)] [text-shadow:0_0_8px_rgba(38,192,207,0.9),0_1px_3px_rgba(0,0,0,0.8)]">
               {service.number}
             </span>
           </div>
