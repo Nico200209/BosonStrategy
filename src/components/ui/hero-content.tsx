@@ -39,7 +39,7 @@ export function HeroContent() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-4 max-w-3xl text-xl font-light text-white/85 md:text-2xl"
+          className="mt-1 max-w-4xl text-5xl font-light text-white/85 md:text-6xl lg:text-7xl"
         >
           en ejecución consistente
         </motion.p>
