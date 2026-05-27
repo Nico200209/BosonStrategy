@@ -3,7 +3,22 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { HiOutlineArrowRight } from "react-icons/hi";
+import Image from "next/image";
 import { services, type Service } from "@/lib/services-data";
+
+/* ── Icon map per service slug ─────────────────────────────────────────── */
+const serviceIconMap: Record<string, string> = {
+  "estrategia-de-negocios":
+    "/Recursos Gráficos/íconos/RGB - Digital/Estrategia/Estrategia-03.png",
+  "investigacion-aplicada":
+    "/Recursos Gráficos/íconos/RGB - Digital/Monitoreo/Monitoreo-06.png",
+  "excelencia-operacional":
+    "/Recursos Gráficos/íconos/RGB - Digital/Proceso/Proceso-03.png",
+  "finanzas-corporativas":
+    "/Recursos Gráficos/íconos/RGB - Digital/Finanzas/Finanzas-02.png",
+  "cultura-organizacional":
+    "/Recursos Gráficos/íconos/RGB - Digital/Team/Team-03.png",
+};
 
 /* ── Intro section ──────────────────────────────────────────────────── */
 function IntroSection() {
@@ -100,10 +115,16 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
         {/* Left accent bar */}
         <div className="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-boson-accent transition-transform duration-500 origin-top group-hover:scale-y-100" />
 
-        {/* Number */}
-        <span className="ml-6 shrink-0 text-[56px] font-black leading-none text-boson-accent/15 transition-colors duration-300 group-hover:text-boson-accent/50 lg:text-[72px]">
-          {service.number}
-        </span>
+        {/* Icon */}
+        <div className="ml-6 flex h-[56px] w-[56px] shrink-0 items-center justify-center opacity-[0.15] transition-opacity duration-300 group-hover:opacity-[0.55] lg:h-[72px] lg:w-[72px]">
+          <Image
+            src={serviceIconMap[service.slug] ?? ""}
+            alt={service.name}
+            width={72}
+            height={72}
+            className="h-full w-full object-contain"
+          />
+        </div>
 
         {/* Content */}
         <div className="ml-6 flex-1 lg:ml-0">

@@ -82,15 +82,20 @@ const jsonLd = {
   "@type": "Organization",
   name: "Bosón Ingeniería Estratégica de Negocios",
   url: "https://www.bosonstrategy.com",
-  email: "contacto@bosonstrategy.com",
+  email: "bosoninfo@bosonstrategy.com",
   description:
     "Firma de ingeniería estratégica de negocios especializada en convertir estrategia en ejecución consistente mediante sistemas operativos para organizaciones en el Caribe y Centroamérica.",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Av. Sarasota N° 55, Ensanche Bella Vista",
     addressLocality: "Santo Domingo",
     addressCountry: "DO",
   },
-  sameAs: ["https://www.linkedin.com/company/boson-estrategia-negocios"],
+  sameAs: [
+    "https://www.linkedin.com/company/boson-estrategia-negocio",
+    "https://www.instagram.com/bosonstrategy/",
+    "https://web.facebook.com/profile.php?id=61588138097886",
+  ],
   knowsAbout: [
     "Estrategia de Negocios",
     "Investigación Aplicada",

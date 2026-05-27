@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import { HiOutlineMapPin, HiOutlineEnvelope } from "react-icons/hi2";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 const services = [
   { label: "Estrategia de Negocios", href: "/servicios/estrategia-de-negocios" },
@@ -23,9 +23,19 @@ const navLinks = [
 
 const socials = [
   {
+    icon: FaInstagram,
+    label: "Instagram",
+    href: "https://www.instagram.com/bosonstrategy/",
+  },
+  {
+    icon: FaFacebookF,
+    label: "Facebook",
+    href: "https://web.facebook.com/profile.php?id=61588138097886",
+  },
+  {
     icon: FaLinkedinIn,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/boson-estrategia-negocios",
+    href: "https://www.linkedin.com/company/boson-estrategia-negocio",
   },
 ];
 
@@ -77,7 +87,7 @@ export function FooterSection() {
             {/* Logo */}
             <div className="mb-5">
               <Image
-                src="/Logos/boson-logo-blanco.png"
+                src="/Logos/Logos PNG/RGB - Digital/Blanco y Negro/Blanco-03.png"
                 alt="Bosón Ingeniería Estratégica de Negocios"
                 width={160}
                 height={46}
@@ -157,17 +167,17 @@ export function FooterSection() {
               <li className="flex items-start gap-3">
                 <HiOutlineMapPin className="mt-0.5 h-4 w-4 shrink-0 text-boson-accent" />
                 <span className="text-xs leading-relaxed text-white/55">
-                  Santo Domingo,<br />
-                  República Dominicana.
+                  Av. Sarasota N° 55, Ensanche Bella Vista.<br />
+                  Santo Domingo.
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <HiOutlineEnvelope className="h-4 w-4 shrink-0 text-boson-accent" />
                 <a
-                  href="mailto:contacto@bosonstrategy.com"
+                  href="mailto:bosoninfo@bosonstrategy.com"
                   className="text-xs text-white/55 transition-colors hover:text-white"
                 >
-                  contacto@bosonstrategy.com
+                  bosoninfo@bosonstrategy.com
                 </a>
               </li>
             </ul>
