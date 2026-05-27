@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: MdOutlineAccessTime,
     label: "Horario de atención",
-    value: "09:00am – 06:00pm, lunes a viernes",
+    value: "09:00am - 06:00pm, lunes a viernes",
     href: undefined,
   },
 ];
@@ -297,7 +297,7 @@ function MapEmbed({ inView }: { inView: boolean }) {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Ubicación Bosón Ingeniería Estratégica de Negocios — Av. Sarasota 55, Ensanche Bella Vista, Santo Domingo"
+        title="Ubicación de Bosón Ingeniería Estratégica de Negocios: Av. Sarasota 55, Ensanche Bella Vista, Santo Domingo"
       />
     </motion.div>
   );

@@ -7,22 +7,106 @@ import { FooterSection } from "@/components/ui/footer-section";
 import { ContactPageContent } from "@/components/ui/contact-page-content";
 
 export const metadata: Metadata = {
-  title: "Contacto",
+  title: "Contacto | Agenda una Consulta Estratégica",
   description:
-    "Agenda una conversación con nuestro equipo. Cuéntanos el desafío estratégico de tu organización y definamos el punto de partida.",
+    "Contáctanos y agenda una conversación con nuestro equipo en Santo Domingo, República Dominicana. Cuéntanos el desafío estratégico de tu organización y definamos el punto de partida.",
+  keywords: [
+    "contacto Bosón Ingeniería Estratégica",
+    "consulta estratégica República Dominicana",
+    "consultoría empresarial Santo Domingo",
+    "agenda consulta estrategia negocios",
+    "contactar firma consultoría Caribe",
+    "Av. Sarasota Santo Domingo consultoría",
+  ],
   openGraph: {
-    title: "Contacto — Bosón Ingeniería Estratégica de Negocios",
+    title: "Contacto | Bosón Ingeniería Estratégica de Negocios",
     description:
-      "Agenda una conversación con nuestro equipo. Cuéntanos el desafío estratégico de tu organización y definamos el punto de partida.",
+      "Agenda una conversación con nuestro equipo en Santo Domingo. Cuéntanos el desafío estratégico de tu organización y definamos el punto de partida.",
     url: "https://www.bosonstrategy.com/contacto",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Contacto | Bosón Ingeniería Estratégica de Negocios",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contacto | Bosón Ingeniería Estratégica de Negocios",
+    description:
+      "Agenda una conversación con nuestro equipo. Cuéntanos el desafío estratégico de tu organización.",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://www.bosonstrategy.com/contacto",
   },
 };
 
+const contactoJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://www.bosonstrategy.com/contacto/#webpage",
+  url: "https://www.bosonstrategy.com/contacto",
+  name: "Contacto | Bosón Ingeniería Estratégica de Negocios",
+  description:
+    "Agenda una conversación con el equipo de Bosón Ingeniería Estratégica de Negocios en Santo Domingo, República Dominicana.",
+  isPartOf: { "@id": "https://www.bosonstrategy.com/#website" },
+  about: { "@id": "https://www.bosonstrategy.com/#organization" },
+  inLanguage: "es-DO",
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://www.bosonstrategy.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Contacto",
+        item: "https://www.bosonstrategy.com/contacto",
+      },
+    ],
+  },
+  mainEntity: {
+    "@type": "Organization",
+    "@id": "https://www.bosonstrategy.com/#organization",
+    name: "Bosón Ingeniería Estratégica de Negocios",
+    email: "bosoninfo@bosonstrategy.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Av. Sarasota N° 55, Ensanche Bella Vista",
+      addressLocality: "Santo Domingo",
+      addressRegion: "Distrito Nacional",
+      addressCountry: "DO",
+    },
+    openingHours: "Mo-Fr 09:00-18:00",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "bosoninfo@bosonstrategy.com",
+      contactType: "customer service",
+      availableLanguage: "Spanish",
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    },
+  },
+};
+
 export default function ContactoPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactoJsonLd) }}
+      />
     <main>
       {/* ── Top strip ── */}
       <div className="bg-boson-primary-dark">
@@ -50,7 +134,7 @@ export default function ContactoPage() {
       <section className="relative flex min-h-[320px] items-end overflow-hidden bg-boson-primary">
         <Image
           src="/fotografias/oficina-blanca-3.jpeg"
-          alt="Contacto — Bosón Ingeniería Estratégica de Negocios"
+          alt="Oficinas de Bosón Ingeniería Estratégica de Negocios en Santo Domingo"
           fill
           priority
           className="object-cover"
@@ -81,5 +165,6 @@ export default function ContactoPage() {
       {/* ── Footer ── */}
       <FooterSection />
     </main>
+    </>
   );
 }
