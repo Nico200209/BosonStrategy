@@ -89,9 +89,9 @@ export function FooterSection() {
               <Image
                 src="/Logos/Logos PNG/RGB - Digital/Blanco y Negro/Blanco-03.png"
                 alt="Bosón Ingeniería Estratégica de Negocios"
-                width={160}
-                height={46}
-                className="h-10 w-auto object-contain"
+                width={320}
+                height={92}
+                className="h-20 w-auto object-contain"
               />
             </div>
 

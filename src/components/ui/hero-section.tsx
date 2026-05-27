@@ -30,7 +30,7 @@ export function HeroSection() {
       <section id="inicio" className="relative flex min-h-[90vh] items-center justify-center overflow-hidden">
         <Image
           src="/fotografias/edificio-moderno.jpg"
-          alt="Bosón Ingeniería Estratégica de Negocios — Santo Domingo"
+          alt="Bosón Ingeniería Estratégica de Negocios en Santo Domingo, República Dominicana"
           fill
           priority
           className="object-cover"

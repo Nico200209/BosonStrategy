@@ -116,8 +116,8 @@ export function TestimonialsSection() {
               transition={{ duration: 0.55, delay: 0.25 }}
               className="text-base leading-relaxed text-boson-body md:text-right"
             >
-              Bosón trabaja con organizaciones que enfrentan complejidad estructural
-              — independientemente de su tamaño. El punto de entrada es el diseño,
+              Bosón trabaja con organizaciones que enfrentan complejidad estructural,
+              independientemente de su tamaño. El punto de entrada es el diseño,
               no el volumen.
             </motion.p>
           </div>

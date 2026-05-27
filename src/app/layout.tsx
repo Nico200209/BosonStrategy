@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.bosonstrategy.com"),
   title: {
     default: "Bosón Ingeniería Estratégica de Negocios",
-    template: "%s — Bosón Ingeniería Estratégica de Negocios",
+    template: "%s | Bosón Ingeniería Estratégica de Negocios",
   },
   description:
     "Convertimos la estrategia en ejecución consistente. Firma líder en ingeniería estratégica de negocios en República Dominicana y el Caribe.",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     locale: "es_DO",
     url: "https://www.bosonstrategy.com",
     siteName: "Bosón Ingeniería Estratégica de Negocios",
-    title: "Bosón — Convertimos la estrategia en ejecución consistente",
+    title: "Bosón | Convertimos la estrategia en ejecución consistente",
     description:
       "Firma líder en ingeniería estratégica de negocios en República Dominicana. Estrategia, Investigación Aplicada, Excelencia Operacional, Finanzas Corporativas y Cultura Organizacional.",
     images: [
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bosón — Ingeniería Estratégica de Negocios",
+    title: "Bosón | Ingeniería Estratégica de Negocios",
     description:
       "Convertimos la estrategia en ejecución consistente. República Dominicana.",
     images: ["/og-image.png"],
@@ -77,35 +77,65 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Bosón Ingeniería Estratégica de Negocios",
-  url: "https://www.bosonstrategy.com",
-  email: "bosoninfo@bosonstrategy.com",
-  description:
-    "Firma de ingeniería estratégica de negocios especializada en convertir estrategia en ejecución consistente mediante sistemas operativos para organizaciones en el Caribe y Centroamérica.",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Av. Sarasota N° 55, Ensanche Bella Vista",
-    addressLocality: "Santo Domingo",
-    addressCountry: "DO",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.bosonstrategy.com/#organization",
+    name: "Bosón Ingeniería Estratégica de Negocios",
+    url: "https://www.bosonstrategy.com",
+    email: "bosoninfo@bosonstrategy.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.bosonstrategy.com/Logos/Logos PNG/RGB - Digital/Blanco y Negro/Blanco-03.png",
+      width: 200,
+      height: 58,
+    },
+    description:
+      "Firma de ingeniería estratégica de negocios especializada en convertir estrategia en ejecución consistente mediante sistemas operativos para organizaciones en el Caribe y Centroamérica.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Av. Sarasota N° 55, Ensanche Bella Vista",
+      addressLocality: "Santo Domingo",
+      addressRegion: "Distrito Nacional",
+      addressCountry: "DO",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "bosoninfo@bosonstrategy.com",
+      contactType: "customer service",
+      availableLanguage: "Spanish",
+    },
+    areaServed: ["República Dominicana", "El Caribe", "Centroamérica"],
+    sameAs: [
+      "https://www.linkedin.com/company/boson-estrategia-negocio",
+      "https://www.instagram.com/bosonstrategy/",
+      "https://web.facebook.com/profile.php?id=61588138097886",
+    ],
+    knowsAbout: [
+      "Estrategia de Negocios",
+      "Investigación Aplicada",
+      "Excelencia Operacional",
+      "Finanzas Corporativas",
+      "Cultura Organizacional",
+      "Consultoría Estratégica",
+      "Ingeniería de Negocios",
+    ],
   },
-  sameAs: [
-    "https://www.linkedin.com/company/boson-estrategia-negocio",
-    "https://www.instagram.com/bosonstrategy/",
-    "https://web.facebook.com/profile.php?id=61588138097886",
-  ],
-  knowsAbout: [
-    "Estrategia de Negocios",
-    "Investigación Aplicada",
-    "Excelencia Operacional",
-    "Finanzas Corporativas",
-    "Cultura Organizacional",
-    "Consultoría Estratégica",
-    "Ingeniería de Negocios",
-  ],
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.bosonstrategy.com/#website",
+    url: "https://www.bosonstrategy.com",
+    name: "Bosón Ingeniería Estratégica de Negocios",
+    description:
+      "Convertimos la estrategia en ejecución consistente. Firma líder en ingeniería estratégica de negocios en República Dominicana.",
+    publisher: {
+      "@id": "https://www.bosonstrategy.com/#organization",
+    },
+    inLanguage: "es-DO",
+  },
+];
 
 export default function RootLayout({
   children,
@@ -115,10 +145,13 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        {jsonLd.map((schema, i) => (
+          <script
+            key={i}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))}
       </head>
       <body className={`${inter.variable} ${openSans.variable} antialiased`}>
         {children}
