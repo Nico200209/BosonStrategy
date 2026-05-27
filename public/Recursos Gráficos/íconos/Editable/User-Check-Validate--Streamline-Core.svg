@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="User-Check-Validate--Streamline-Core" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1080 1080">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #26c0cf;
+      }
+
+      .st0, .st1 {
+        fill-rule: evenodd;
+      }
+
+      .st1 {
+        fill: #26304c;
+      }
+    </style>
+  </defs>
+  <g id="user-check-validate--actions-close-checkmark-check-geometric-human-person-single-success-user">
+    <path id="Subtract" class="st1" d="M417.67,117.59c-101.34,0-183.5,82.15-183.5,183.5s82.15,183.5,183.5,183.5,183.5-82.15,183.5-183.5-82.15-183.5-183.5-183.5ZM417.67,545.75c-168.9,0-305.83,136.92-305.83,305.83v30.58c0,16.89,13.69,30.58,30.58,30.58h317.34c-34.08-42.52-36.53-104.24-2.33-149.85,40.54-54.05,117.21-65,171.26-24.47l27.48,20.61,35.21-44.02c-50.16-100.35-153.89-169.26-273.72-169.26Z"/>
+    <path id="Vector__x28_Stroke_x29_" class="st0" d="M950.94,586.39c19.78,15.83,22.99,44.69,7.16,64.48l-244.66,305.82c-15.48,19.35-43.52,22.91-63.35,8.04l-122.33-91.75c-20.27-15.2-24.38-43.95-9.17-64.22,15.2-20.26,43.96-24.37,64.22-9.17l86.76,65.07,216.89-271.11c15.83-19.78,44.69-22.99,64.48-7.16Z"/>
+  </g>
+</svg>

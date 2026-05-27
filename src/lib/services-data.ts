@@ -8,181 +8,234 @@ export type Service = {
   number: string;
   name: string;
   shortName: string;
+  subtitle: string;
   tagline: string;
   question: string;
   solutions: ServiceSolution[];
   image: string;
+  keywords: string[];
 };
 
 export const services: Service[] = [
   {
-    slug: "cierre-de-brechas",
+    slug: "estrategia-de-negocios",
     number: "01",
-    name: "Cierre de brechas de competencias organizacionales",
-    shortName: "Cierre de Brechas",
+    name: "Estrategia de Negocios",
+    shortName: "Estrategia de Negocios",
+    subtitle: "Modelos · Competitividad · Expansión",
     tagline:
-      "Formamos equipos que piensan estratégicamente y se adaptan a los desafíos del futuro.",
+      "Diseñamos el modelo de negocio que hace posible el siguiente nivel de crecimiento.",
     question:
-      "¿Su equipo requiere de nuevas habilidades para enfrentar los desafíos actuales y futuros? ¿La falta de capacitación está limitando su crecimiento y adaptabilidad?",
+      "La mayoría de las empresas crecen sin rediseñar el sistema que las sostiene. El modelo de negocio, la estrategia competitiva y la arquitectura comercial determinan si una organización puede escalar — o si el crecimiento genera fricción.",
     solutions: [
       {
-        title: "Diagnósticos de necesidades de habilidades y desempeños esperados",
+        title: "Diseño de modelos de negocio y estrategia competitiva",
         description:
-          "Identificación de brechas clave para alinear las capacidades del equipo con los objetivos estratégicos.",
+          "Construcción del modelo que define cómo la organización crea, entrega y captura valor en su mercado. Arquitectura competitiva con lógica sistémica.",
       },
       {
-        title: "Programas de formación continua y reskilling",
+        title: "Estrategia comercial y de marketing integrada al modelo",
         description:
-          "Diseño de planes personalizados para desarrollar habilidades críticas y fomentar el pensamiento estratégico en los colaboradores.",
+          "La estrategia comercial no es un departamento aparte — es parte integral del modelo de negocio. La diseñamos integrada al sistema operativo del negocio.",
       },
       {
-        title: "Estrategias de desarrollo de talento",
+        title: "Expansión de mercados y posicionamiento estratégico",
         description:
-          "Creación de rutas de crecimiento profesional que impulsen la adaptabilidad y resiliencia en los equipos.",
+          "Diseño de la estrategia de entrada a nuevos mercados con rigor técnico: análisis competitivo, segmentación, modelo go-to-market y plan de ejecución.",
       },
       {
-        title: "Formación en liderazgo estratégico",
+        title: "Portfolio de productos y estrategia de crecimiento",
         description:
-          "Programas para líderes que buscan fomentar una cultura de innovación y toma de decisiones basada en datos.",
+          "Evaluación y rediseño del portfolio de productos o servicios con visión estratégica de rentabilidad, posicionamiento y escalabilidad.",
+      },
+      {
+        title: "Estrategia de entrada a mercados del Caribe y Centroamérica",
+        description:
+          "Adaptación de estrategias y metodologías globales a las particularidades del contexto regional. Para organizaciones que proyectan expansión en la región.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&auto=format&fit=crop&q=80",
+    image: "/fotografias/edificio-moderno.jpg",
+    keywords: [
+      "estrategia de negocios",
+      "modelo de negocio",
+      "estrategia competitiva",
+      "expansión de mercados",
+      "consultoría estratégica República Dominicana",
+    ],
   },
   {
-    slug: "data-e-inteligencia",
+    slug: "investigacion-aplicada",
     number: "02",
-    name: "Data y modelos de inteligencia corporativa",
-    shortName: "Data e Inteligencia",
+    name: "Investigación Aplicada",
+    shortName: "Investigación Aplicada",
+    subtitle: "Inteligencia · Mercado · Análisis",
     tagline:
-      "Convertimos datos en estrategias que impulsan el crecimiento sostenible.",
+      "Cada decisión estratégica tiene que tener sustento. La investigación no es un módulo adicional — es la base de todo lo que construimos.",
     question:
-      "¿Toma decisiones basadas en intuición en lugar de datos? ¿La falta de información precisa le impide identificar oportunidades o anticipar riesgos?",
+      "Una decisión estratégica sin inteligencia de mercado es una apuesta. El 69.3% de las empresas reporta brechas de habilidades que afectan su operación directamente — y la mayoría toma decisiones sin datos que reduzcan esa incertidumbre.",
     solutions: [
       {
-        title: "Investigaciones de mercado y análisis de tendencias",
+        title: "Inteligencia de mercado y análisis del entorno macro y micro",
         description:
-          "Identificación de oportunidades y riesgos para la toma de decisiones informadas.",
+          "Análisis estructurado del entorno competitivo, tendencias sectoriales y señales del mercado que afectan las decisiones estratégicas de la organización.",
       },
       {
-        title: "Modelos de Business Intelligence y IA",
+        title: "Investigación competitiva y análisis del contexto empresarial",
         description:
-          "Soluciones tecnológicas para optimizar procesos y predecir escenarios futuros.",
-      },
-      {
-        title: "Desarrollo de Customer Journey Maps y Buyer Personas",
-        description:
-          "Herramientas para entender y conectar con los clientes de manera estratégica.",
+          "Mapeo de la competencia, benchmarking estratégico y lectura de señales del entorno empresarial para fundamentar decisiones con precisión.",
       },
       {
         title: "Estudios de factibilidad y predicción de demanda",
         description:
-          "Análisis basados en datos para garantizar decisiones sostenibles y rentables.",
+          "Análisis cuantitativo y cualitativo para evaluar la viabilidad de proyectos, nuevos mercados o líneas de negocio antes de comprometer recursos.",
+      },
+      {
+        title: "Análisis accionable como base de decisiones estratégicas",
+        description:
+          "No entregamos reportes de datos. Entregamos inteligencia accionable: análisis que clarifica opciones, reduce incertidumbre y mejora la precisión de cada decisión.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&auto=format&fit=crop&q=80",
+    image: "/fotografias/figuras.jpeg",
+    keywords: [
+      "investigación de mercado",
+      "inteligencia de mercado",
+      "análisis competitivo",
+      "estudios de factibilidad",
+      "inteligencia empresarial República Dominicana",
+    ],
   },
   {
-    slug: "planificacion-estrategica",
+    slug: "excelencia-operacional",
     number: "03",
-    name: "Planificación estratégica sostenible",
-    shortName: "Planificación Estratégica",
+    name: "Excelencia Operacional",
+    shortName: "Excelencia Operacional",
+    subtitle: "Procesos · Eficiencia · Escalabilidad",
     tagline:
-      "Diseñamos estrategias que no solo funcionan hoy, sino que se adaptan al mañana.",
+      "Rediseñamos el modelo operativo para que funcione en el tamaño que la organización quiere alcanzar, no en el que tenía.",
     question:
-      "¿Su estrategia actual no está generando los resultados esperados? ¿Le cuesta alinear a su equipo alrededor de objetivos comunes y adaptarse a cambios inesperados?",
+      "Las empresas crecen, pero sin rediseñar los procesos que las sostienen. El resultado es lo que llamamos 'crecimiento con heroísmo': dependencia de personas clave, procesos sin estandarizar y sistemas operativos que no fueron construidos para escalar.",
     solutions: [
       {
-        title: "Definición de estrategias de crecimiento y desarrollo",
+        title: "Arquitectura de procesos y modelos operativos escalables",
         description:
-          "Creación de planes personalizados que integren sostenibilidad y adaptabilidad.",
+          "Diseño del modelo operativo que hace posible la ejecución consistente: procesos, roles, gobernanza y flujos construidos para el tamaño que se quiere alcanzar.",
       },
       {
-        title: "Alineación estratégica y clarificación de objetivos",
+        title: "Diagnóstico y rediseño de la cadena de valor",
         description:
-          "Asegurar que todos los niveles de la organización comprendan y trabajen hacia un mismo norte.",
+          "Identificación de cuellos de botella, redundancias y vacíos en la cadena de valor. Rediseño con foco en eficiencia, velocidad y escalabilidad.",
       },
       {
-        title: "Modelos de ejecución y seguimiento",
+        title: "Indicadores de negocio y sistemas de medición del desempeño",
         description:
-          "Implementación de Road Maps y Cuadros de Mando para monitorear el progreso y ajustar estrategias en tiempo real.",
+          "Construcción de los KPIs y cuadros de mando que hacen visibles los resultados operativos y permiten tomar decisiones basadas en datos, no en intuición.",
       },
       {
-        title: "Talleres de pensamiento estratégico",
+        title: "Productividad y eficiencia operacional con enfoque estratégico",
         description:
-          "Formación para equipos en toma de decisiones basadas en datos.",
-      },
-      {
-        title: "Evaluación de sostenibilidad estratégica",
-        description:
-          "Cumplimiento de hitos en el Road Map y mantenimiento de la alineación estratégica en los equipos.",
+          "Mejora de la productividad no como reducción de costos, sino como rediseño del sistema que genera resultados con consistencia y menor dependencia de esfuerzo heroico.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&auto=format&fit=crop&q=80",
+    image: "/fotografias/procesos-operacionales.jpeg",
+    keywords: [
+      "excelencia operacional",
+      "optimización de procesos",
+      "modelo operativo",
+      "eficiencia empresarial",
+      "escalabilidad organizacional",
+    ],
   },
   {
-    slug: "eficiencia-operativa",
+    slug: "finanzas-corporativas",
     number: "04",
-    name: "Eficiencia operativa con enfoque estratégico",
-    shortName: "Eficiencia Operativa",
+    name: "Finanzas Corporativas",
+    shortName: "Finanzas Corporativas",
+    subtitle: "Capital · Inversión · Sostenibilidad",
     tagline:
-      "Optimizamos sus procesos para liberar el potencial de crecimiento de su organización.",
+      "La sostenibilidad financiera no es consecuencia del crecimiento — es la condición que lo hace posible.",
     question:
-      "¿Sus procesos operativos son lentos, costosos o ineficientes? ¿La falta de optimización está consumiendo recursos que podrían usarse para impulsar el crecimiento?",
+      "Las organizaciones que crecen sin una arquitectura financiera sólida acumulan complejidad que no pueden gestionar. La estructura de capital, la valoración del negocio y la estrategia financiera deben estar diseñadas para el tamaño que se quiere alcanzar.",
     solutions: [
       {
-        title: "Análisis y mejora de la cadena de valor",
+        title: "Estructuras de capital y evaluación de inversión",
         description:
-          "Identificación de oportunidades para aumentar la eficiencia y reducir costos.",
+          "Diseño de la estructura financiera óptima para cada etapa de crecimiento. Análisis y evaluación de inversiones con criterios de rentabilidad, riesgo y sostenibilidad.",
       },
       {
-        title: "Optimización de procesos comerciales y logísticos",
-        description: "Implementación de soluciones end-to-end.",
+        title: "Sostenibilidad financiera y modelos de valoración de negocio",
+        description:
+          "Construcción de modelos financieros que soportan la toma de decisiones estratégicas. Valoración de empresas para M&A, financiamiento o planificación de largo plazo.",
       },
       {
-        title: "Trade y Shopper Marketing",
+        title: "Finanzas para grupos empresariales y holdings",
         description:
-          "Estrategias para maximizar el impacto en el punto de venta y mejorar la experiencia del cliente.",
+          "Visión integrada de la estrategia financiera a nivel corporativo. Estructuración, consolidación y gobernanza financiera para grupos con múltiples unidades de negocio.",
       },
       {
-        title: "Integración de herramientas para agilizar operaciones",
+        title: "Estrategia financiera en procesos de institucionalización",
         description:
-          "Integración de herramientas para agilizar operaciones y procesos comerciales.",
+          "Diseño del sistema financiero que acompaña la transición de modelo informal a gobierno corporativo con estructura, control y visión de largo plazo.",
+      },
+      {
+        title: "Acompañamiento en transición generacional con visión financiera",
+        description:
+          "Estructuración financiera para empresas familiares en proceso de cambio generacional. Valoración, planificación patrimonial y diseño del modelo financiero para la siguiente etapa.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&auto=format&fit=crop&q=80",
+    image: "/fotografias/edificio-azul.jpeg",
+    keywords: [
+      "finanzas corporativas",
+      "valoración de empresas",
+      "estructuras de capital",
+      "fusiones y adquisiciones",
+      "finanzas empresariales República Dominicana",
+    ],
   },
   {
-    slug: "transformacion-cultural",
+    slug: "cultura-organizacional",
     number: "05",
-    name: "Transformación cultural y comunicación estratégica",
-    shortName: "Transformación Cultural",
+    name: "Cultura Organizacional",
+    shortName: "Cultura Organizacional",
+    subtitle: "Arquitectura · Estrategia · Desempeño",
     tagline:
-      "Creamos culturas que inspiran a los equipos a pensar estratégicamente y adaptarse al cambio.",
+      "La cultura no es un valor en una pared. Es la arquitectura que determina cómo opera la organización cuando nadie está mirando.",
     question:
-      "¿Su cultura organizacional no está alineada con sus objetivos? ¿La falta de comunicación interna está generando desmotivación o desalineación en su equipo?",
+      "La diferencia entre una empresa que escala y una que se estanca casi siempre se encuentra en lo que no se ve. La cultura — cuando está diseñada como variable estratégica — es el sistema que sostiene la ejecución con consistencia.",
     solutions: [
       {
-        title: "Definición de cultura corporativa y propósito organizacional",
+        title: "Cultura como variable estratégica del modelo de negocio",
         description:
-          "Alineación de valores y comportamientos con la estrategia de la empresa.",
+          "¿La cultura actual de esta empresa soporta el modelo de negocio que quieren tener? Diseñamos la arquitectura cultural como palanca de crecimiento, no como iniciativa de RRHH.",
       },
       {
-        title: "Mapas de cultura y conductas observables",
+        title: "Diseño de arquitectura cultural de alto desempeño",
         description:
-          "Herramientas para medir y fortalecer la cultura organizacional.",
+          "Construcción del sistema cultural que hace posible la ejecución estratégica: comportamientos, normas, gobernanza y mecanismos de refuerzo alineados al modelo.",
       },
       {
-        title: "Estrategias de comunicación interna",
+        title: "Alineación entre cultura y modelo de negocio actual y proyectado",
         description:
-          "Planes para fomentar la transparencia, el engagement y la alineación con los objetivos estratégicos.",
+          "Diagnóstico de la brecha entre la cultura que existe y la cultura que el modelo de negocio requiere. Diseño del plan de transformación con criterio sistémico.",
+      },
+      {
+        title: "Cultura institucional en procesos de transición generacional",
+        description:
+          "Redefinición de la arquitectura cultural como parte del proceso de cambio generacional. Preservación de la identidad con adaptación al nuevo modelo de dirección.",
+      },
+      {
+        title: "Diagnóstico y rediseño cultural como palanca de crecimiento",
+        description:
+          "Evaluación rigurosa del estado cultural actual y su impacto en la capacidad de ejecución. Diseño del plan de transformación con métricas y mecanismos de seguimiento.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&auto=format&fit=crop&q=80",
+    image: "/fotografias/oficina-blanca-2.jpeg",
+    keywords: [
+      "cultura organizacional",
+      "transformación cultural",
+      "cultura corporativa",
+      "arquitectura cultural",
+      "diseño organizacional",
+    ],
   },
 ];
 

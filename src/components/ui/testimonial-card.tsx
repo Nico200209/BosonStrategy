@@ -17,12 +17,12 @@ export function TestimonialCard({ author, text, className }: TestimonialCardProp
   return (
     <div
       className={cn(
-        "flex w-[300px] shrink-0 flex-col gap-5 rounded-sm border-t-2 border-caoba-accent bg-caoba-primary p-6",
+        "flex w-[300px] shrink-0 flex-col gap-5 rounded-sm border-t-2 border-boson-accent bg-boson-primary p-6",
         className
       )}
     >
       {/* Large quote mark */}
-      <span className="text-4xl font-black leading-none text-caoba-accent/30 select-none">
+      <span className="text-4xl font-black leading-none text-boson-accent/30 select-none">
         &ldquo;
       </span>
 
@@ -40,7 +40,7 @@ export function TestimonialCard({ author, text, className }: TestimonialCardProp
           </AvatarFallback>
         </Avatar>
         <div>
-          <p className="text-xs font-black text-caoba-accent">{author.name}</p>
+          <p className="text-xs font-black text-boson-accent">{author.name}</p>
           <p className="text-[11px] text-white/40">{author.role}</p>
         </div>
       </div>
