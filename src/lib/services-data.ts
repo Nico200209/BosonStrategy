@@ -238,14 +238,16 @@ export const services: Service[] = [
     shortName: "Cultura Organizacional",
     subtitle: "Arquitectura · Estrategia · Desempeño",
     tagline:
-      "La cultura no es un valor en una pared. Es la arquitectura que determina cómo opera la organización cuando nadie está mirando.",
+      "La diferencia entre una empresa que escala y una que se estanca casi siempre está en algo que no aparece en los estados financieros: la cultura.",
     question:
-      "La diferencia entre una empresa que escala y una que se estanca casi siempre se encuentra en lo que no se ve. La cultura, cuando está diseñada como variable estratégica, es el sistema que sostiene la ejecución con consistencia.",
+      "¿Tu empresa tiene valores declarados en la pared, pero comportamientos en la operación que van en dirección contraria? ¿Estás en un proceso de cambio estratégico o transición generacional, pero la cultura organizacional no está acompañando ese cambio, sino resistiéndolo? ¿La cultura de tu organización se formó sola con el tiempo, en lugar de haber sido diseñada para sostener los resultados que necesitas generar?",
+    solutionsIntro:
+      "La cultura no es lo que se escribe en el manual de bienvenida: es el sistema de comportamientos que determina cómo se toman decisiones, cómo se ejecuta la estrategia y cómo responde la organización ante los desafíos. En Bosón la tratamos como una variable estratégica del modelo de negocio: la diagnosticamos con rigor, la diseñamos con intención y la alineamos con la estrategia que la organización necesita ejecutar. No trabajamos en cultura como iniciativa de bienestar: la trabajamos como palanca de crecimiento.",
     solutions: [
       {
         title: "Cultura como variable estratégica del modelo de negocio",
         description:
-          "¿La cultura actual de esta empresa soporta el modelo de negocio que quieren tener? Diseñamos la arquitectura cultural como palanca de crecimiento, no como iniciativa de RRHH.",
+          "Diagnóstico y reencuadre de la cultura desde su función estratégica: ¿qué comportamientos necesita esta organización para ejecutar su estrategia con consistencia?",
       },
       {
         title: "Diseño de arquitectura cultural de alto desempeño",
@@ -255,18 +257,23 @@ export const services: Service[] = [
       {
         title: "Alineación entre cultura y modelo de negocio actual y proyectado",
         description:
-          "Diagnóstico de la brecha entre la cultura que existe y la cultura que el modelo de negocio requiere. Diseño del plan de transformación con criterio sistémico.",
+          "La cultura que funcionó para el negocio de hoy puede ser un freno para el negocio de mañana. Alineamos ambos para que el sistema cultural sostenga la dirección estratégica definida.",
       },
       {
         title: "Cultura institucional en procesos de transición generacional",
         description:
-          "Redefinición de la arquitectura cultural como parte del proceso de cambio generacional. Preservación de la identidad con adaptación al nuevo modelo de dirección.",
+          "La transición generacional es también una transición cultural. Diseñamos el sistema que preserva lo que funciona y transforma lo que limita el siguiente capítulo de la organización.",
       },
       {
-        title: "Diagnóstico y rediseño cultural como palanca de crecimiento",
+        title: "Diagnóstico y rediseño de la cultura como palanca de crecimiento",
         description:
-          "Evaluación rigurosa del estado cultural actual y su impacto en la capacidad de ejecución. Diseño del plan de transformación con métricas y mecanismos de seguimiento.",
+          "Evaluación técnica del estado cultural actual, identificación de los comportamientos que frenan la ejecución y diseño del sistema cultural que los reemplaza.",
       },
+    ],
+    impactItems: [
+      "Una arquitectura cultural definida, medible y alineada a la estrategia del negocio, no a valores genéricos que nadie opera.",
+      "Comportamientos organizacionales que sostienen la ejecución estratégica con consistencia.",
+      "Una cultura que acompaña los procesos de cambio, expansión o transición en lugar de resistirlos.",
     ],
     image: "/fotos-servicios/Servicio-5.jpg",
     keywords: [
