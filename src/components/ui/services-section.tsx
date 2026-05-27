@@ -13,7 +13,7 @@ const services = [
     title: "Estrategia de Negocios",
     subtitle: "Modelos · Competitividad · Expansión",
     description:
-      "Diseñamos el modelo de negocio que hace posible el siguiente nivel. Estrategia competitiva, expansión de mercados y portfolio de productos integrados en un solo sistema.",
+      "El modelo de negocio que te trajo hasta aquí no es el que te llevará al siguiente nivel. Construimos el sistema estratégico completo: modelo, arquitectura comercial y estrategia de crecimiento integrados.",
     image: "/fotos-servicios/Servicio-1.jpg",
   },
   {
@@ -22,7 +22,7 @@ const services = [
     title: "Investigación Aplicada",
     subtitle: "Inteligencia · Mercado · Análisis",
     description:
-      "Cada decisión estratégica tiene que tener sustento. Inteligencia de mercado, investigación competitiva y análisis accionable como base de todo lo que construimos.",
+      "Una decisión estratégica sin inteligencia de mercado es una apuesta. Construimos análisis diseñados para responder preguntas estratégicas concretas, no reportes que nadie usa.",
     image: "/fotos-servicios/Servicio-2.jpg",
   },
   {
@@ -31,7 +31,7 @@ const services = [
     title: "Excelencia Operacional",
     subtitle: "Procesos · Eficiencia · Escalabilidad",
     description:
-      "Arquitectura de procesos, rediseño de la cadena de valor e indicadores de negocio. Modelos operativos construidos para el tamaño que se quiere alcanzar.",
+      "Las empresas no se estancan por falta de talento, sino porque su sistema operativo no fue diseñado para escalar. Construimos la arquitectura de procesos que hace posible el siguiente nivel.",
     image: "/fotos-servicios/Servicio-3.jpg",
   },
   {
@@ -40,7 +40,7 @@ const services = [
     title: "Finanzas Corporativas",
     subtitle: "Capital · Inversión · Sostenibilidad",
     description:
-      "Estructuras de capital, valoración de negocio y estrategia financiera para grupos empresariales, holdings y procesos de transición generacional.",
+      "No basta con gestionar las finanzas. Diseñamos la arquitectura financiera que hace sostenible el tamaño proyectado: capital, valoración de negocio y estrategia para institucionalización y transiciones generacionales.",
     image: "/fotos-servicios/Servicio-4.jpg",
   },
   {
@@ -49,7 +49,7 @@ const services = [
     title: "Cultura Organizacional",
     subtitle: "Arquitectura · Estrategia · Desempeño",
     description:
-      "La cultura como variable estratégica. Diseñamos la arquitectura cultural que soporta el modelo de negocio que la organización quiere tener.",
+      "La diferencia entre una empresa que escala y una que se estanca no aparece en los estados financieros: está en la cultura. La tratamos como variable estratégica del modelo de negocio, no como iniciativa de bienestar.",
     image: "/fotos-servicios/Servicio-5.jpg",
   },
 ];
@@ -125,7 +125,7 @@ export function ServicesSection() {
             transition={{ duration: 0.5 }}
             className="mb-4 text-xs font-black tracking-[0.25em] text-boson-accent uppercase"
           >
-            5 sistemas estratégicos de negocio — No son áreas aisladas. Son partes de un mismo sistema.
+            5 sistemas estratégicos de negocio. No son áreas aisladas. Son partes de un mismo sistema.
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 16 }}

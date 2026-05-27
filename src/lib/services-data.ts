@@ -11,7 +11,9 @@ export type Service = {
   subtitle: string;
   tagline: string;
   question: string;
+  solutionsIntro?: string;
   solutions: ServiceSolution[];
+  impactItems?: string[];
   image: string;
   keywords: string[];
 };
@@ -24,9 +26,11 @@ export const services: Service[] = [
     shortName: "Estrategia de Negocios",
     subtitle: "Modelos · Competitividad · Expansión",
     tagline:
-      "Diseñamos el modelo de negocio que hace posible el siguiente nivel de crecimiento.",
+      "El modelo de negocio que te trajo hasta aquí no es el que te llevará al siguiente nivel. Nosotros construimos el que sí puede hacerlo.",
     question:
-      "La mayoría de las empresas crecen sin rediseñar el sistema que las sostiene. El modelo de negocio, la estrategia competitiva y la arquitectura comercial determinan si una organización puede escalar — o si el crecimiento genera fricción.",
+      "¿Tu empresa crece en facturación pero los márgenes no mejoran, y no hay claridad de por qué? ¿La estrategia comercial opera desconectada del modelo de negocio, como si fueran dos mundos distintos? ¿Tu organización está evaluando expansión a nuevos mercados sin una arquitectura estratégica que sostenga esa decisión?",
+    solutionsIntro:
+      "El problema no es falta de ambición: es falta de sistema. La mayoría de las empresas crecen sin rediseñar el modelo que las sostiene, convirtiendo el crecimiento en fricción acumulada. En Bosón construimos el sistema estratégico completo: modelo de negocio, estrategia competitiva, arquitectura comercial y estrategia de crecimiento, diseñados para funcionar de forma integrada, no como piezas sueltas.",
     solutions: [
       {
         title: "Diseño de modelos de negocio y estrategia competitiva",
@@ -36,7 +40,7 @@ export const services: Service[] = [
       {
         title: "Estrategia comercial y de marketing integrada al modelo",
         description:
-          "La estrategia comercial no es un departamento aparte — es parte integral del modelo de negocio. La diseñamos integrada al sistema operativo del negocio.",
+          "La estrategia comercial no es un departamento aparte: es parte integral del modelo de negocio. La diseñamos integrada al sistema operativo del negocio.",
       },
       {
         title: "Expansión de mercados y posicionamiento estratégico",
@@ -44,15 +48,20 @@ export const services: Service[] = [
           "Diseño de la estrategia de entrada a nuevos mercados con rigor técnico: análisis competitivo, segmentación, modelo go-to-market y plan de ejecución.",
       },
       {
-        title: "Portfolio de productos y estrategia de crecimiento",
+        title: "Portafolio de productos y estrategia de crecimiento",
         description:
-          "Evaluación y rediseño del portfolio de productos o servicios con visión estratégica de rentabilidad, posicionamiento y escalabilidad.",
+          "Evaluación y rediseño del portafolio de productos o servicios con visión estratégica de rentabilidad, posicionamiento y escalabilidad.",
       },
       {
         title: "Estrategia de entrada a mercados del Caribe y Centroamérica",
         description:
           "Adaptación de estrategias y metodologías globales a las particularidades del contexto regional. Para organizaciones que proyectan expansión en la región.",
       },
+    ],
+    impactItems: [
+      "Un modelo de negocio documentado que el equipo comprende y opera con consistencia, sin depender de que Bosón regrese a explicarlo.",
+      "Estrategia comercial y modelo alineados en un solo sistema, sin silos entre ventas, marketing y entrega de valor.",
+      "Decisiones de expansión sustentadas en una arquitectura estratégica definida, no en intuición.",
     ],
     image: "/fotos-servicios/Servicio-1.jpg",
     keywords: [
@@ -70,9 +79,11 @@ export const services: Service[] = [
     shortName: "Investigación Aplicada",
     subtitle: "Inteligencia · Mercado · Análisis",
     tagline:
-      "Cada decisión estratégica tiene que tener sustento. La investigación no es un módulo adicional — es la base de todo lo que construimos.",
+      "Una decisión estratégica sin inteligencia de mercado es una apuesta. Nosotros construimos la inteligencia que reduce esa incertidumbre.",
     question:
-      "Una decisión estratégica sin inteligencia de mercado es una apuesta. El 69.3% de las empresas reporta brechas de habilidades que afectan su operación directamente — y la mayoría toma decisiones sin datos que reduzcan esa incertidumbre.",
+      "¿Tu empresa toma decisiones de crecimiento, expansión o inversión basadas principalmente en experiencia, no en datos del mercado real? ¿Los estudios que has contratado terminaron en informes que nadie usó para tomar decisiones concretas? ¿Tienes la sensación de que tus competidores leen el entorno mejor que tú, y no sabes exactamente por qué?",
+    solutionsIntro:
+      "La inteligencia de mercado solo tiene valor cuando se convierte en decisiones. En Bosón no entregamos reportes de investigación: construimos análisis diseñados para resolver una pregunta estratégica específica. ¿Vale la pena entrar a este mercado? ¿Esta inversión tiene demanda suficiente? ¿Qué está haciendo el competidor que nosotros no vemos? Cada hallazgo se traduce en acción, no en páginas de contexto.",
     solutions: [
       {
         title: "Inteligencia de mercado y análisis del entorno macro y micro",
@@ -80,7 +91,7 @@ export const services: Service[] = [
           "Análisis estructurado del entorno competitivo, tendencias sectoriales y señales del mercado que afectan las decisiones estratégicas de la organización.",
       },
       {
-        title: "Investigación competitiva y análisis del contexto empresarial",
+        title: "Investigación competitiva y señales del contexto empresarial",
         description:
           "Mapeo de la competencia, benchmarking estratégico y lectura de señales del entorno empresarial para fundamentar decisiones con precisión.",
       },
@@ -94,6 +105,16 @@ export const services: Service[] = [
         description:
           "No entregamos reportes de datos. Entregamos inteligencia accionable: análisis que clarifica opciones, reduce incertidumbre y mejora la precisión de cada decisión.",
       },
+      {
+        title: "Datos que reducen la incertidumbre en cada decisión",
+        description:
+          "Integración de la investigación al proceso de toma de decisiones de la organización. El objetivo no es tener más datos: es tomar mejores decisiones con los datos correctos.",
+      },
+    ],
+    impactItems: [
+      "Decisiones estratégicas respaldadas por inteligencia del mercado real, no por supuestos internos.",
+      "Estudios de factibilidad que reducen el riesgo de inversión antes de comprometer capital.",
+      "Un equipo directivo que opera con mayor precisión porque entiende el entorno, no solo el interior de su organización.",
     ],
     image: "/fotos-servicios/Servicio-2.jpg",
     keywords: [
@@ -111,9 +132,11 @@ export const services: Service[] = [
     shortName: "Excelencia Operacional",
     subtitle: "Procesos · Eficiencia · Escalabilidad",
     tagline:
-      "Rediseñamos el modelo operativo para que funcione en el tamaño que la organización quiere alcanzar, no en el que tenía.",
+      "Las empresas no se estancan por falta de talento. Se estancan porque su sistema operativo no fue diseñado para el tamaño que quieren alcanzar.",
     question:
-      "Las empresas crecen, pero sin rediseñar los procesos que las sostienen. El resultado es lo que llamamos 'crecimiento con heroísmo': dependencia de personas clave, procesos sin estandarizar y sistemas operativos que no fueron construidos para escalar.",
+      "¿El crecimiento de tu empresa depende de personas clave que hacen heroísmos, en lugar de procesos que funcionan solos? ¿Los mismos errores operacionales se repiten una y otra vez porque no hay sistemas estandarizados que los prevengan? ¿Cada vez que la empresa crece, la operación se vuelve más compleja y más difícil de gestionar, en lugar de más simple?",
+    solutionsIntro:
+      "Lo que muchas empresas llaman 'problemas de personas' son en realidad problemas de sistema. En Bosón diagnosticamos los vacíos estructurales que generan ineficiencia: procesos sin estandarizar, cadenas de valor con cuellos de botella y métricas que no reflejan la realidad operacional. Construimos la arquitectura de procesos que permite escalar sin heroísmos. El resultado no es eficiencia por eficiencia: es un sistema operativo diseñado para el tamaño que la organización proyecta alcanzar.",
     solutions: [
       {
         title: "Arquitectura de procesos y modelos operativos escalables",
@@ -133,8 +156,18 @@ export const services: Service[] = [
       {
         title: "Productividad y eficiencia operacional con enfoque estratégico",
         description:
-          "Mejora de la productividad no como reducción de costos, sino como rediseño del sistema que genera resultados con consistencia y menor dependencia de esfuerzo heroico.",
+          "Mejora de la productividad con criterio estratégico: no se optimiza todo, sino lo que genera mayor impacto en los resultados que la organización necesita producir.",
       },
+      {
+        title: "Modelos operativos diseñados para el tamaño que se quiere alcanzar",
+        description:
+          "La operación de hoy no puede ser la misma de mañana. Diseñamos el modelo operativo para el negocio que la empresa quiere ser, no para el que es hoy.",
+      },
+    ],
+    impactItems: [
+      "Procesos documentados y estandarizados que funcionan independientemente de quién los opere.",
+      "Indicadores que miden lo que realmente importa para la estrategia y la operación.",
+      "Una organización que puede crecer sin que cada nuevo nivel de escala genere más caos.",
     ],
     image: "/fotos-servicios/Servicio-3.jpg",
     keywords: [
@@ -152,9 +185,11 @@ export const services: Service[] = [
     shortName: "Finanzas Corporativas",
     subtitle: "Capital · Inversión · Sostenibilidad",
     tagline:
-      "La sostenibilidad financiera no es consecuencia del crecimiento — es la condición que lo hace posible.",
+      "No basta con gestionar las finanzas. El crecimiento sostenible requiere una arquitectura financiera diseñada para el tamaño que quieres alcanzar.",
     question:
-      "Las organizaciones que crecen sin una arquitectura financiera sólida acumulan complejidad que no pueden gestionar. La estructura de capital, la valoración del negocio y la estrategia financiera deben estar diseñadas para el tamaño que se quiere alcanzar.",
+      "¿Tu empresa genera resultados, pero no hay claridad sobre si la estructura de capital que sostiene ese crecimiento es la correcta? ¿Estás en un proceso de institucionalización o transición generacional sin una estrategia financiera que lo acompañe con rigor? ¿No sabes con precisión cuánto vale tu negocio ni qué palancas financieras tienes disponibles para el siguiente nivel?",
+    solutionsIntro:
+      "Las organizaciones que crecen sin una arquitectura financiera sólida acumulan complejidad que eventualmente no pueden gestionar. En Bosón diseñamos la estructura financiera que hace sostenible el tamaño proyectado: evaluación de capital, valoración del negocio, estrategia de institucionalización y acompañamiento en transiciones generacionales. No optimizamos el estado financiero de hoy: construimos la arquitectura para el negocio que quieres ser mañana.",
     solutions: [
       {
         title: "Estructuras de capital y evaluación de inversión",
@@ -169,7 +204,7 @@ export const services: Service[] = [
       {
         title: "Finanzas para grupos empresariales y holdings",
         description:
-          "Visión integrada de la estrategia financiera a nivel corporativo. Estructuración, consolidación y gobernanza financiera para grupos con múltiples unidades de negocio.",
+          "Visión financiera integrada para organizaciones con múltiples unidades de negocio. Estrategia de capital, distribución de recursos y métricas a nivel corporativo.",
       },
       {
         title: "Estrategia financiera en procesos de institucionalización",
@@ -179,8 +214,13 @@ export const services: Service[] = [
       {
         title: "Acompañamiento en transición generacional con visión financiera",
         description:
-          "Estructuración financiera para empresas familiares en proceso de cambio generacional. Valoración, planificación patrimonial y diseño del modelo financiero para la siguiente etapa.",
+          "La transición generacional no es solo un evento de gobernanza: es una decisión financiera de largo alcance. Diseñamos la estrategia financiera que hace viable esa transición.",
       },
+    ],
+    impactItems: [
+      "Una estructura de capital evaluada y optimizada para el modelo de negocio actual y proyectado.",
+      "Claridad sobre el valor real de la organización y las palancas financieras disponibles para crecer.",
+      "Una estrategia financiera que acompaña los procesos de institucionalización o transición, en lugar de convertirse en el cuello de botella que los frena.",
     ],
     image: "/fotos-servicios/Servicio-4.jpg",
     keywords: [
@@ -198,14 +238,16 @@ export const services: Service[] = [
     shortName: "Cultura Organizacional",
     subtitle: "Arquitectura · Estrategia · Desempeño",
     tagline:
-      "La cultura no es un valor en una pared. Es la arquitectura que determina cómo opera la organización cuando nadie está mirando.",
+      "La diferencia entre una empresa que escala y una que se estanca casi siempre está en algo que no aparece en los estados financieros: la cultura.",
     question:
-      "La diferencia entre una empresa que escala y una que se estanca casi siempre se encuentra en lo que no se ve. La cultura — cuando está diseñada como variable estratégica — es el sistema que sostiene la ejecución con consistencia.",
+      "¿Tu empresa tiene valores declarados en la pared, pero comportamientos en la operación que van en dirección contraria? ¿Estás en un proceso de cambio estratégico o transición generacional, pero la cultura organizacional no está acompañando ese cambio, sino resistiéndolo? ¿La cultura de tu organización se formó sola con el tiempo, en lugar de haber sido diseñada para sostener los resultados que necesitas generar?",
+    solutionsIntro:
+      "La cultura no es lo que se escribe en el manual de bienvenida: es el sistema de comportamientos que determina cómo se toman decisiones, cómo se ejecuta la estrategia y cómo responde la organización ante los desafíos. En Bosón la tratamos como una variable estratégica del modelo de negocio: la diagnosticamos con rigor, la diseñamos con intención y la alineamos con la estrategia que la organización necesita ejecutar. No trabajamos en cultura como iniciativa de bienestar: la trabajamos como palanca de crecimiento.",
     solutions: [
       {
         title: "Cultura como variable estratégica del modelo de negocio",
         description:
-          "¿La cultura actual de esta empresa soporta el modelo de negocio que quieren tener? Diseñamos la arquitectura cultural como palanca de crecimiento, no como iniciativa de RRHH.",
+          "Diagnóstico y reencuadre de la cultura desde su función estratégica: ¿qué comportamientos necesita esta organización para ejecutar su estrategia con consistencia?",
       },
       {
         title: "Diseño de arquitectura cultural de alto desempeño",
@@ -215,18 +257,23 @@ export const services: Service[] = [
       {
         title: "Alineación entre cultura y modelo de negocio actual y proyectado",
         description:
-          "Diagnóstico de la brecha entre la cultura que existe y la cultura que el modelo de negocio requiere. Diseño del plan de transformación con criterio sistémico.",
+          "La cultura que funcionó para el negocio de hoy puede ser un freno para el negocio de mañana. Alineamos ambos para que el sistema cultural sostenga la dirección estratégica definida.",
       },
       {
         title: "Cultura institucional en procesos de transición generacional",
         description:
-          "Redefinición de la arquitectura cultural como parte del proceso de cambio generacional. Preservación de la identidad con adaptación al nuevo modelo de dirección.",
+          "La transición generacional es también una transición cultural. Diseñamos el sistema que preserva lo que funciona y transforma lo que limita el siguiente capítulo de la organización.",
       },
       {
-        title: "Diagnóstico y rediseño cultural como palanca de crecimiento",
+        title: "Diagnóstico y rediseño de la cultura como palanca de crecimiento",
         description:
-          "Evaluación rigurosa del estado cultural actual y su impacto en la capacidad de ejecución. Diseño del plan de transformación con métricas y mecanismos de seguimiento.",
+          "Evaluación técnica del estado cultural actual, identificación de los comportamientos que frenan la ejecución y diseño del sistema cultural que los reemplaza.",
       },
+    ],
+    impactItems: [
+      "Una arquitectura cultural definida, medible y alineada a la estrategia del negocio, no a valores genéricos que nadie opera.",
+      "Comportamientos organizacionales que sostienen la ejecución estratégica con consistencia.",
+      "Una cultura que acompaña los procesos de cambio, expansión o transición en lugar de resistirlos.",
     ],
     image: "/fotos-servicios/Servicio-5.jpg",
     keywords: [
