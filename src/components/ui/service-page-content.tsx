@@ -7,7 +7,7 @@ import { HiOutlineArrowRight } from "react-icons/hi";
 import type { Service } from "@/lib/services-data";
 import { services } from "@/lib/services-data";
 
-/* ── Icon map — light-background version (fondo claro de El Desafío) ──── */
+/* ── Icon map: light-background version (fondo claro de El Desafío) ──── */
 const serviceIconMapLight: Record<string, string> = {
   "estrategia-de-negocios":
     "/Recursos Gráficos/íconos/RGB - Digital/Estrategia/Estrategia-01.png",
@@ -260,9 +260,8 @@ function SolutionsSection({ service }: { service: Service }) {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="mb-14 max-w-lg text-sm leading-relaxed text-white/55"
             >
-              Cada solución está diseñada para abordar desafíos específicos e instalar sistemas
-              que permiten a tu organización operar con mayor consistencia, eficiencia y dirección
-              estratégica — no solo en el corto plazo, sino de forma sostenible.
+              {service.solutionsIntro ??
+                "Cada solución está diseñada para abordar desafíos específicos e instalar sistemas que permiten a tu organización operar con mayor consistencia, eficiencia y dirección estratégica, no solo en el corto plazo sino de forma sostenible."}
             </motion.p>
 
             {/* Solutions */}
@@ -296,24 +295,6 @@ function SolutionsSection({ service }: { service: Service }) {
               ))}
             </div>
 
-            {/* CTA button */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{
-                duration: 0.6,
-                delay: 0.2 + service.solutions.length * 0.14 + 0.25,
-              }}
-              className="mt-10"
-            >
-              <a
-                href="/contacto"
-                className="inline-flex items-center gap-3 bg-boson-accent px-7 py-3.5 text-xs font-black uppercase tracking-widest text-boson-primary-dark transition-colors hover:bg-boson-accent-hover"
-              >
-                Solicita una consulta estratégica
-                <HiOutlineArrowRight className="h-4 w-4" />
-              </a>
-            </motion.div>
           </div>
 
           {/* ── Sidebar ── */}
@@ -321,6 +302,71 @@ function SolutionsSection({ service }: { service: Service }) {
             <div className="sticky top-28">
               <ServicesSidebar currentSlug={service.slug} />
             </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── Impacto Bosón section ──────────────────────────────────────────────── */
+function ImpactoBosonSection({ service }: { service: Service }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, amount: 0.2 });
+
+  if (!service.impactItems || service.impactItems.length === 0) return null;
+
+  return (
+    <section className="overflow-hidden bg-boson-bg-soft py-24">
+      <div ref={ref} className="mx-auto max-w-7xl px-6">
+        <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-[3fr_5fr]">
+
+          {/* Left: label + decorative line */}
+          <div className="lg:pt-1">
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              className="mb-6 text-xs font-bold tracking-[0.25em] text-boson-accent uppercase"
+            >
+              Impacto Bosón
+            </motion.p>
+
+            <motion.div
+              initial={{ scaleX: 0, originX: 0 }}
+              animate={inView ? { scaleX: 1 } : {}}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="h-px w-16 bg-boson-accent"
+            />
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-8 text-xs leading-relaxed text-boson-body/60"
+            >
+              Lo que queda instalado<br />cuando terminamos el trabajo.
+            </motion.p>
+          </div>
+
+          {/* Right: stacked items */}
+          <div>
+            {service.impactItems.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: 32 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.1 + i * 0.18, ease: [0.22, 1, 0.36, 1] }}
+                className="flex gap-6 border-b border-boson-heading/10 py-8 last:border-0"
+              >
+                {/* Accent bar */}
+                <div className="mt-1 w-0.5 shrink-0 self-stretch bg-boson-accent" />
+                <p className="text-lg font-light leading-relaxed text-boson-heading lg:text-xl">
+                  {item}
+                </p>
+              </motion.div>
+            ))}
           </div>
 
         </div>
@@ -387,6 +433,7 @@ export function ServicePageContent({ service }: { service: Service }) {
       <ServiceHero service={service} />
       <ChallengeSection service={service} />
       <SolutionsSection service={service} />
+      <ImpactoBosonSection service={service} />
       <CTASection />
     </>
   );

@@ -232,7 +232,7 @@ function TrustSection() {
             transition={{ duration: 0.85, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="mb-8 text-base leading-relaxed text-boson-body">
-              En Bosón no solo entregamos recomendaciones — dejamos{" "}
+              En Bosón no solo entregamos recomendaciones. Dejamos{" "}
               <strong className="font-bold text-boson-heading">sistemas instalados</strong>{" "}
               que permiten a tu organización operar de forma autónoma, adaptable y sostenible
               frente a los desafíos del mercado.

@@ -11,7 +11,9 @@ export type Service = {
   subtitle: string;
   tagline: string;
   question: string;
+  solutionsIntro?: string;
   solutions: ServiceSolution[];
+  impactItems?: string[];
   image: string;
   keywords: string[];
 };
@@ -24,9 +26,11 @@ export const services: Service[] = [
     shortName: "Estrategia de Negocios",
     subtitle: "Modelos · Competitividad · Expansión",
     tagline:
-      "Diseñamos el modelo de negocio que hace posible el siguiente nivel de crecimiento.",
+      "El modelo de negocio que te trajo hasta aquí no es el que te llevará al siguiente nivel. Nosotros construimos el que sí puede hacerlo.",
     question:
-      "La mayoría de las empresas crecen sin rediseñar el sistema que las sostiene. El modelo de negocio, la estrategia competitiva y la arquitectura comercial determinan si una organización puede escalar — o si el crecimiento genera fricción.",
+      "¿Tu empresa crece en facturación pero los márgenes no mejoran, y no hay claridad de por qué? ¿La estrategia comercial opera desconectada del modelo de negocio, como si fueran dos mundos distintos? ¿Tu organización está evaluando expansión a nuevos mercados sin una arquitectura estratégica que sostenga esa decisión?",
+    solutionsIntro:
+      "El problema no es falta de ambición: es falta de sistema. La mayoría de las empresas crecen sin rediseñar el modelo que las sostiene, convirtiendo el crecimiento en fricción acumulada. En Bosón construimos el sistema estratégico completo: modelo de negocio, estrategia competitiva, arquitectura comercial y estrategia de crecimiento, diseñados para funcionar de forma integrada, no como piezas sueltas.",
     solutions: [
       {
         title: "Diseño de modelos de negocio y estrategia competitiva",
@@ -36,7 +40,7 @@ export const services: Service[] = [
       {
         title: "Estrategia comercial y de marketing integrada al modelo",
         description:
-          "La estrategia comercial no es un departamento aparte — es parte integral del modelo de negocio. La diseñamos integrada al sistema operativo del negocio.",
+          "La estrategia comercial no es un departamento aparte: es parte integral del modelo de negocio. La diseñamos integrada al sistema operativo del negocio.",
       },
       {
         title: "Expansión de mercados y posicionamiento estratégico",
@@ -44,15 +48,20 @@ export const services: Service[] = [
           "Diseño de la estrategia de entrada a nuevos mercados con rigor técnico: análisis competitivo, segmentación, modelo go-to-market y plan de ejecución.",
       },
       {
-        title: "Portfolio de productos y estrategia de crecimiento",
+        title: "Portafolio de productos y estrategia de crecimiento",
         description:
-          "Evaluación y rediseño del portfolio de productos o servicios con visión estratégica de rentabilidad, posicionamiento y escalabilidad.",
+          "Evaluación y rediseño del portafolio de productos o servicios con visión estratégica de rentabilidad, posicionamiento y escalabilidad.",
       },
       {
         title: "Estrategia de entrada a mercados del Caribe y Centroamérica",
         description:
           "Adaptación de estrategias y metodologías globales a las particularidades del contexto regional. Para organizaciones que proyectan expansión en la región.",
       },
+    ],
+    impactItems: [
+      "Un modelo de negocio documentado que el equipo comprende y opera con consistencia, sin depender de que Bosón regrese a explicarlo.",
+      "Estrategia comercial y modelo alineados en un solo sistema, sin silos entre ventas, marketing y entrega de valor.",
+      "Decisiones de expansión sustentadas en una arquitectura estratégica definida, no en intuición.",
     ],
     image: "/fotos-servicios/Servicio-1.jpg",
     keywords: [
@@ -70,9 +79,9 @@ export const services: Service[] = [
     shortName: "Investigación Aplicada",
     subtitle: "Inteligencia · Mercado · Análisis",
     tagline:
-      "Cada decisión estratégica tiene que tener sustento. La investigación no es un módulo adicional — es la base de todo lo que construimos.",
+      "Cada decisión estratégica tiene que tener sustento. La investigación no es un módulo adicional: es la base de todo lo que construimos.",
     question:
-      "Una decisión estratégica sin inteligencia de mercado es una apuesta. El 69.3% de las empresas reporta brechas de habilidades que afectan su operación directamente — y la mayoría toma decisiones sin datos que reduzcan esa incertidumbre.",
+      "Una decisión estratégica sin inteligencia de mercado es una apuesta. El 69.3% de las empresas reporta brechas de habilidades que afectan su operación directamente, y la mayoría toma decisiones sin datos que reduzcan esa incertidumbre.",
     solutions: [
       {
         title: "Inteligencia de mercado y análisis del entorno macro y micro",
@@ -152,7 +161,7 @@ export const services: Service[] = [
     shortName: "Finanzas Corporativas",
     subtitle: "Capital · Inversión · Sostenibilidad",
     tagline:
-      "La sostenibilidad financiera no es consecuencia del crecimiento — es la condición que lo hace posible.",
+      "La sostenibilidad financiera no es consecuencia del crecimiento: es la condición que lo hace posible.",
     question:
       "Las organizaciones que crecen sin una arquitectura financiera sólida acumulan complejidad que no pueden gestionar. La estructura de capital, la valoración del negocio y la estrategia financiera deben estar diseñadas para el tamaño que se quiere alcanzar.",
     solutions: [
@@ -200,7 +209,7 @@ export const services: Service[] = [
     tagline:
       "La cultura no es un valor en una pared. Es la arquitectura que determina cómo opera la organización cuando nadie está mirando.",
     question:
-      "La diferencia entre una empresa que escala y una que se estanca casi siempre se encuentra en lo que no se ve. La cultura — cuando está diseñada como variable estratégica — es el sistema que sostiene la ejecución con consistencia.",
+      "La diferencia entre una empresa que escala y una que se estanca casi siempre se encuentra en lo que no se ve. La cultura, cuando está diseñada como variable estratégica, es el sistema que sostiene la ejecución con consistencia.",
     solutions: [
       {
         title: "Cultura como variable estratégica del modelo de negocio",
