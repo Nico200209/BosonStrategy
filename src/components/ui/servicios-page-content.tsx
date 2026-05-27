@@ -95,8 +95,6 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.25 });
 
-  const firstQuestion = service.question.split("?")[0] + "?";
-
   return (
     <motion.div
       ref={ref}
@@ -132,7 +130,7 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
             {service.name}
           </p>
           <p className="max-w-2xl text-sm leading-relaxed text-white/45">
-            {firstQuestion}
+            {service.tagline}
           </p>
         </div>
 

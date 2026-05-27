@@ -7,22 +7,143 @@ import { FooterSection } from "@/components/ui/footer-section";
 import { ServiciosPageContent } from "@/components/ui/servicios-page-content";
 
 export const metadata: Metadata = {
-  title: "Servicios",
+  title: "Servicios | Estrategia, Operaciones, Finanzas y Cultura",
   description:
-    "Cinco ámbitos de intervención estratégica: Estrategia de Negocios, Investigación Aplicada, Excelencia Operacional, Finanzas Corporativas y Cultura Organizacional.",
+    "Cinco ámbitos de intervención estratégica: Estrategia de Negocios, Investigación Aplicada, Excelencia Operacional, Finanzas Corporativas y Cultura Organizacional. Diseñamos sistemas que convierten la estrategia en ejecución real.",
+  keywords: [
+    "servicios consultoría estratégica",
+    "estrategia de negocios República Dominicana",
+    "investigación aplicada de mercado",
+    "excelencia operacional empresas",
+    "finanzas corporativas Santo Domingo",
+    "cultura organizacional empresas",
+    "sistemas estratégicos de negocio",
+    "consultoría empresarial Caribe",
+    "ingeniería estratégica servicios",
+    "transformación organizacional",
+  ],
   openGraph: {
-    title: "Servicios — Bosón Ingeniería Estratégica de Negocios",
+    title: "Servicios | Bosón Ingeniería Estratégica de Negocios",
     description:
-      "Diseñamos sistemas estratégicos de negocio que permiten a las organizaciones operar mejor, crecer con estructura y escalar con consistencia.",
+      "Cinco ámbitos de intervención estratégica: Estrategia de Negocios, Investigación Aplicada, Excelencia Operacional, Finanzas Corporativas y Cultura Organizacional.",
     url: "https://www.bosonstrategy.com/servicios",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Servicios de Bosón Ingeniería Estratégica de Negocios",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Servicios | Bosón Ingeniería Estratégica de Negocios",
+    description:
+      "Cinco ámbitos de intervención estratégica para convertir la estrategia en ejecución real.",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://www.bosonstrategy.com/servicios",
   },
 };
 
+const serviciosJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://www.bosonstrategy.com/servicios/#webpage",
+    url: "https://www.bosonstrategy.com/servicios",
+    name: "Servicios | Bosón Ingeniería Estratégica de Negocios",
+    description:
+      "Cinco ámbitos de intervención estratégica: Estrategia de Negocios, Investigación Aplicada, Excelencia Operacional, Finanzas Corporativas y Cultura Organizacional.",
+    isPartOf: { "@id": "https://www.bosonstrategy.com/#website" },
+    about: { "@id": "https://www.bosonstrategy.com/#organization" },
+    inLanguage: "es-DO",
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.bosonstrategy.com" },
+        { "@type": "ListItem", position: 2, name: "Servicios", item: "https://www.bosonstrategy.com/servicios" },
+      ],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Servicios de Bosón Ingeniería Estratégica de Negocios",
+    description: "Cinco ámbitos de intervención estratégica para organizaciones en República Dominicana y el Caribe.",
+    numberOfItems: 5,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "Service",
+          name: "Estrategia de Negocios",
+          url: "https://www.bosonstrategy.com/servicios/estrategia-de-negocios",
+          description: "Diseño de modelos de negocio, estrategia competitiva, expansión de mercados y arquitectura comercial integrada.",
+          provider: { "@id": "https://www.bosonstrategy.com/#organization" },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "Service",
+          name: "Investigación Aplicada",
+          url: "https://www.bosonstrategy.com/servicios/investigacion-aplicada",
+          description: "Inteligencia de mercado, análisis competitivo y estudios de factibilidad que respaldan decisiones estratégicas.",
+          provider: { "@id": "https://www.bosonstrategy.com/#organization" },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "Service",
+          name: "Excelencia Operacional",
+          url: "https://www.bosonstrategy.com/servicios/excelencia-operacional",
+          description: "Arquitectura de procesos, modelos operativos escalables e indicadores de desempeño para organizaciones en crecimiento.",
+          provider: { "@id": "https://www.bosonstrategy.com/#organization" },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        item: {
+          "@type": "Service",
+          name: "Finanzas Corporativas",
+          url: "https://www.bosonstrategy.com/servicios/finanzas-corporativas",
+          description: "Estructuras de capital, valoración de empresas y estrategia financiera para institucionalización y transición generacional.",
+          provider: { "@id": "https://www.bosonstrategy.com/#organization" },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        item: {
+          "@type": "Service",
+          name: "Cultura Organizacional",
+          url: "https://www.bosonstrategy.com/servicios/cultura-organizacional",
+          description: "Diseño de arquitectura cultural de alto desempeño alineada a la estrategia y el modelo de negocio.",
+          provider: { "@id": "https://www.bosonstrategy.com/#organization" },
+        },
+      },
+    ],
+  },
+];
+
 export default function ServiciosPage() {
   return (
+    <>
+      {serviciosJsonLd.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     <main>
       {/* ── Top strip ── */}
       <div className="bg-boson-primary-dark">
@@ -50,7 +171,7 @@ export default function ServiciosPage() {
       <section className="relative flex min-h-[360px] items-end overflow-hidden bg-boson-primary">
         <Image
           src="/fotografias/edificio-moderno.jpg"
-          alt="Servicios estratégicos — Bosón Ingeniería Estratégica de Negocios"
+          alt="Servicios estratégicos de Bosón Ingeniería Estratégica de Negocios en República Dominicana"
           fill
           priority
           className="object-cover"
@@ -86,5 +207,6 @@ export default function ServiciosPage() {
       {/* ── Footer ── */}
       <FooterSection />
     </main>
+    </>
   );
 }
