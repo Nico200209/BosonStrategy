@@ -185,9 +185,11 @@ export const services: Service[] = [
     shortName: "Finanzas Corporativas",
     subtitle: "Capital · Inversión · Sostenibilidad",
     tagline:
-      "La sostenibilidad financiera no es consecuencia del crecimiento: es la condición que lo hace posible.",
+      "No basta con gestionar las finanzas. El crecimiento sostenible requiere una arquitectura financiera diseñada para el tamaño que quieres alcanzar.",
     question:
-      "Las organizaciones que crecen sin una arquitectura financiera sólida acumulan complejidad que no pueden gestionar. La estructura de capital, la valoración del negocio y la estrategia financiera deben estar diseñadas para el tamaño que se quiere alcanzar.",
+      "¿Tu empresa genera resultados, pero no hay claridad sobre si la estructura de capital que sostiene ese crecimiento es la correcta? ¿Estás en un proceso de institucionalización o transición generacional sin una estrategia financiera que lo acompañe con rigor? ¿No sabes con precisión cuánto vale tu negocio ni qué palancas financieras tienes disponibles para el siguiente nivel?",
+    solutionsIntro:
+      "Las organizaciones que crecen sin una arquitectura financiera sólida acumulan complejidad que eventualmente no pueden gestionar. En Bosón diseñamos la estructura financiera que hace sostenible el tamaño proyectado: evaluación de capital, valoración del negocio, estrategia de institucionalización y acompañamiento en transiciones generacionales. No optimizamos el estado financiero de hoy: construimos la arquitectura para el negocio que quieres ser mañana.",
     solutions: [
       {
         title: "Estructuras de capital y evaluación de inversión",
@@ -202,7 +204,7 @@ export const services: Service[] = [
       {
         title: "Finanzas para grupos empresariales y holdings",
         description:
-          "Visión integrada de la estrategia financiera a nivel corporativo. Estructuración, consolidación y gobernanza financiera para grupos con múltiples unidades de negocio.",
+          "Visión financiera integrada para organizaciones con múltiples unidades de negocio. Estrategia de capital, distribución de recursos y métricas a nivel corporativo.",
       },
       {
         title: "Estrategia financiera en procesos de institucionalización",
@@ -212,8 +214,13 @@ export const services: Service[] = [
       {
         title: "Acompañamiento en transición generacional con visión financiera",
         description:
-          "Estructuración financiera para empresas familiares en proceso de cambio generacional. Valoración, planificación patrimonial y diseño del modelo financiero para la siguiente etapa.",
+          "La transición generacional no es solo un evento de gobernanza: es una decisión financiera de largo alcance. Diseñamos la estrategia financiera que hace viable esa transición.",
       },
+    ],
+    impactItems: [
+      "Una estructura de capital evaluada y optimizada para el modelo de negocio actual y proyectado.",
+      "Claridad sobre el valor real de la organización y las palancas financieras disponibles para crecer.",
+      "Una estrategia financiera que acompaña los procesos de institucionalización o transición, en lugar de convertirse en el cuello de botella que los frena.",
     ],
     image: "/fotos-servicios/Servicio-4.jpg",
     keywords: [
