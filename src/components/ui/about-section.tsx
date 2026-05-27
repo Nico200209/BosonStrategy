@@ -22,13 +22,13 @@ const features = [
     number: "03",
     title: "Inteligencia Aplicada",
     description:
-      "Cada decisión tiene sustento en datos y contexto. La investigación no es un módulo adicional — es la base de todo lo que construimos.",
+      "Cada decisión tiene sustento en datos y contexto. La investigación no es un módulo adicional: es la base de todo lo que construimos.",
   },
   {
     number: "04",
     title: "Ejecución Real",
     description:
-      "Cerramos la brecha entre estrategia y operación. El objetivo no es depender de Bosón — es que el sistema funcione sin nosotros.",
+      "Cerramos la brecha entre estrategia y operación. El objetivo no es depender de Bosón, sino que el sistema funcione sin nosotros.",
   },
 ];
 
@@ -44,8 +44,8 @@ export function AboutSection() {
           {/* ── Left: image panel ── */}
           <div className="relative min-h-[340px] lg:min-h-0">
             <Image
-              src="/fotografias/oficina-blanca-3.jpeg"
-              alt="Bosón Ingeniería Estratégica de Negocios — equipo"
+              src="/fotos-servicios/Ambiente-oficina-1.jpg"
+              alt="Equipo de Bosón Ingeniería Estratégica de Negocios"
               fill
               className="object-cover"
             />

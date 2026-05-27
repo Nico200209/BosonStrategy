@@ -95,8 +95,6 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.25 });
 
-  const firstQuestion = service.question.split("?")[0] + "?";
-
   return (
     <motion.div
       ref={ref}
@@ -132,7 +130,7 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
             {service.name}
           </p>
           <p className="max-w-2xl text-sm leading-relaxed text-white/45">
-            {firstQuestion}
+            {service.tagline}
           </p>
         </div>
 
@@ -232,7 +230,7 @@ function TrustSection() {
             transition={{ duration: 0.85, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="mb-8 text-base leading-relaxed text-boson-body">
-              En Bosón no solo entregamos recomendaciones — dejamos{" "}
+              En Bosón no solo entregamos recomendaciones. Dejamos{" "}
               <strong className="font-bold text-boson-heading">sistemas instalados</strong>{" "}
               que permiten a tu organización operar de forma autónoma, adaptable y sostenible
               frente a los desafíos del mercado.

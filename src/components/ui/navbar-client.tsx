@@ -26,9 +26,9 @@ export function NavbarClient() {
           <Image
             src="/Logos/Logos PNG/RGB - Digital/Blanco y Negro/Blanco-03.png"
             alt="Bosón Ingeniería Estratégica de Negocios"
-            width={140}
-            height={40}
-            className="h-9 w-auto object-contain"
+            width={200}
+            height={58}
+            className="h-12 w-auto object-contain"
             priority
           />
         </a>

@@ -39,17 +39,17 @@ const values = [
     number: "01",
     title: "Rigor Técnico",
     description:
-      "No asesoramos desde afuera. Diseñamos desde adentro, con metodología probada y pensamiento sistémico. Cada modelo que construimos tiene que funcionar y sostenerse — no solo en papel, sino en la operación real.",
+      "No asesoramos desde afuera. Diseñamos desde adentro, con metodología probada y pensamiento sistémico. Cada modelo que construimos tiene que funcionar y sostenerse, no solo en papel, sino en la operación real.",
     iconSrc: "/Recursos Gráficos/íconos/RGB - Digital/Monitoreo/Monitoreo-01.png",
-    iconAlt: "Rigor Técnico — Monitoreo",
+    iconAlt: "Rigor Técnico: icono de monitoreo",
   },
   {
     number: "02",
     title: "Inteligencia Aplicada",
     description:
-      "Cada decisión tiene un sustento. La investigación de mercado, el análisis del entorno y los datos accionables no son un módulo adicional — son la base de todo lo que construimos.",
+      "Cada decisión tiene un sustento. La investigación de mercado, el análisis del entorno y los datos accionables no son un módulo adicional: son la base de todo lo que construimos.",
     iconSrc: "/Recursos Gráficos/íconos/RGB - Digital/Lupa/Lupa-01.png",
-    iconAlt: "Inteligencia Aplicada — Lupa",
+    iconAlt: "Inteligencia Aplicada: icono de lupa",
   },
   {
     number: "03",
@@ -57,7 +57,7 @@ const values = [
     description:
       "Estrategia, operaciones, finanzas y mercado son partes de un mismo sistema. Los intervenimos de forma integrada. No por partes, no por silos.",
     iconSrc: "/Recursos Gráficos/íconos/RGB - Digital/Proceso/Proceso-01.png",
-    iconAlt: "Visión Sistémica — Proceso",
+    iconAlt: "Visión Sistémica: icono de proceso",
   },
 ];
 
@@ -85,7 +85,7 @@ export function ValuesSection() {
         <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
           <div>
             <p className="mb-5 text-xs font-bold tracking-[0.25em] text-boson-accent uppercase">
-              Ingeniería estratégica de negocios — República Dominicana
+              Ingeniería estratégica de negocios · República Dominicana
             </p>
             <h2 className="text-4xl font-light leading-tight text-white md:text-5xl">
               El sistema que hace{" "}
