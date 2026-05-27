@@ -35,7 +35,7 @@ const socials = [
   {
     icon: FaLinkedinIn,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/boson-estrategia-negocio",
+    href: "https://www.linkedin.com/company/boson-estrategia-negocios/",
   },
 ];
 
