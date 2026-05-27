@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import {
   motion,
   useInView,
@@ -72,39 +72,58 @@ const FAN = 28;
 
 /* ── Component ─────────────────────────────────────────────────────── */
 export function ValuesSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
 
-  const inView = useInView(cardsRef, { once: false, amount: 0.55 });
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  const headerInView = useInView(headerRef, { once: true, margin: "-60px" });
+  const inViewDesktop = useInView(cardsRef, { once: false, amount: 0.3, margin: "-80px" });
+  const inViewMobile = useInView(cardsRef, { once: false, amount: 0.05, margin: "60px" });
+  const inView = isMobile ? inViewMobile : inViewDesktop;
 
   return (
-    <section ref={sectionRef} className="overflow-hidden bg-boson-primary py-24">
+    <section className="overflow-hidden bg-boson-primary py-24">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* ── Header ── */}
-        <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
-          <div>
-            <p className="mb-5 text-xs font-bold tracking-[0.25em] text-boson-accent uppercase">
-              Ingeniería estratégica de negocios · República Dominicana
-            </p>
-            <h2 className="text-4xl font-light leading-tight text-white md:text-5xl">
-              El sistema que hace{" "}
-              <strong className="font-black">posible el crecimiento</strong>
-            </h2>
-          </div>
-
-          <div className="flex flex-col">
-            <p className="text-base leading-loose text-white/60">
-              La mayoría de los problemas de crecimiento empresarial no son problemas de esfuerzo.
-              Son problemas de ejecución y consistencia estratégica. En la región, las organizaciones
-              acumulan talento, tecnología e intención estratégica y, aun así, no escalan. La causa
-              casi siempre es estructural: el modelo de negocio no fue diseñado para soportar el
-              siguiente nivel.
-            </p>
-          </div>
+        <div ref={headerRef} className="mb-16 text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={headerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5 }}
+            className="mb-4 text-xs font-black tracking-[0.25em] text-boson-accent uppercase"
+          >
+            Cómo trabajamos
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            animate={headerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.55, delay: 0.1 }}
+            className="text-4xl font-light leading-tight text-white md:text-5xl"
+          >
+            Tres principios que definen{" "}
+            <strong className="font-black block">cómo construimos</strong>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={headerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.55, delay: 0.2 }}
+            className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white/50"
+          >
+            No asesoramos desde afuera. Cada compromiso integra rigor técnico, inteligencia de
+            mercado y visión sistémica para construir soluciones que funcionan en la operación real.
+          </motion.p>
         </div>
 
-        {/* ── Stats row ── */}
+        {/* ── Stats row ── (oculto temporalmente)
         <div className="mb-16 border-t border-white/10 pt-10">
           <div className="grid grid-cols-3 gap-6 md:gap-0">
             {stats.map((s, i) => (
@@ -127,6 +146,7 @@ export function ValuesSection() {
             ))}
           </div>
         </div>
+        */}
 
         {/* ── Cards: stacked → spread on scroll ── */}
         <div ref={cardsRef} className="grid grid-cols-1 gap-8 md:grid-cols-3">

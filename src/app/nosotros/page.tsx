@@ -140,7 +140,7 @@ export default function NosotrosPage() {
       {/* NosotrosCEOSection — oculto temporalmente, descomentar cuando se necesite */}
       {/* <NosotrosCEOSection /> */}
       <NosotrosCreenciasSection />
-      <NosotrosTeamSection />
+      {/* <NosotrosTeamSection /> */}
 
       <FooterSection />
     </main>
