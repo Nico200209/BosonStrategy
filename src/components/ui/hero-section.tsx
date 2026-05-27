@@ -26,7 +26,7 @@ export function HeroSection() {
       {/* ── Hero (background image server-rendered) ─────────── */}
       <section id="inicio" className="relative flex min-h-[90vh] items-center justify-center overflow-hidden">
         <Image
-          src="/fotografias/edificio-moderno.jpg"
+          src="/Recursos Gráficos/Fondos/RGB - Digital/Fondos café grisáceo/Opción 4/Fondo Café Grisáceo-12.png"
           alt="Bosón Ingeniería Estratégica de Negocios en Santo Domingo, República Dominicana"
           fill
           priority

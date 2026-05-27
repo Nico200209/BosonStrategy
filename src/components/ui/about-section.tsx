@@ -44,7 +44,7 @@ export function AboutSection() {
           {/* ── Left: image panel ── */}
           <div className="relative min-h-[340px] lg:min-h-0">
             <Image
-              src="/fotografias/oficina-blanca-3.jpeg"
+              src="/fotos-servicios/Ambiente-oficina-1.jpg"
               alt="Equipo de Bosón Ingeniería Estratégica de Negocios"
               fill
               className="object-cover"
