@@ -9,15 +9,15 @@ import { services, type Service } from "@/lib/services-data";
 /* ── Icon map per service slug ─────────────────────────────────────────── */
 const serviceIconMap: Record<string, string> = {
   "estrategia-de-negocios":
-    "/Recursos Gráficos/íconos/RGB - Digital/Estrategia/Estrategia-03.png",
+    "/Recursos Gráficos/íconos/RGB - Digital/Estrategia/Estrategia-08.png",
   "investigacion-aplicada":
-    "/Recursos Gráficos/íconos/RGB - Digital/Monitoreo/Monitoreo-06.png",
+    "/Recursos Gráficos/íconos/RGB - Digital/Monitoreo/Monitoreo-09.png",
   "excelencia-operacional":
-    "/Recursos Gráficos/íconos/RGB - Digital/Proceso/Proceso-03.png",
+    "/Recursos Gráficos/íconos/RGB - Digital/Proceso/Proceso-06.png",
   "finanzas-corporativas":
-    "/Recursos Gráficos/íconos/RGB - Digital/Finanzas/Finanzas-02.png",
+    "/Recursos Gráficos/íconos/RGB - Digital/Finanzas/Finanzas-06.png",
   "cultura-organizacional":
-    "/Recursos Gráficos/íconos/RGB - Digital/Team/Team-03.png",
+    "/Recursos Gráficos/íconos/RGB - Digital/Team/Team-06.png",
 };
 
 /* ── Intro section ──────────────────────────────────────────────────── */
