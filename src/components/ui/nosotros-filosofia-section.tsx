@@ -8,12 +8,12 @@ const pillars = [
   {
     title: "Rigor Técnico",
     description:
-      "No asesoramos desde afuera. Diseñamos desde adentro, con metodología probada y pensamiento sistémico. Cada modelo que construimos tiene que funcionar y sostenerse — no solo en papel, sino en la operación real.",
+      "No asesoramos desde afuera. Diseñamos desde adentro, con metodología probada y pensamiento sistémico. Cada modelo que construimos tiene que funcionar y sostenerse, no solo en papel, sino en la operación real.",
   },
   {
     title: "Inteligencia Aplicada",
     description:
-      "Cada decisión tiene un sustento. La investigación de mercado, el análisis del entorno y los datos accionables no son un módulo adicional — son la base de todo lo que construimos.",
+      "Cada decisión tiene un sustento. La investigación de mercado, el análisis del entorno y los datos accionables no son un módulo adicional: son la base de todo lo que construimos.",
   },
   {
     title: "Visión Sistémica",
