@@ -79,9 +79,11 @@ export const services: Service[] = [
     shortName: "Investigación Aplicada",
     subtitle: "Inteligencia · Mercado · Análisis",
     tagline:
-      "Cada decisión estratégica tiene que tener sustento. La investigación no es un módulo adicional: es la base de todo lo que construimos.",
+      "Una decisión estratégica sin inteligencia de mercado es una apuesta. Nosotros construimos la inteligencia que reduce esa incertidumbre.",
     question:
-      "Una decisión estratégica sin inteligencia de mercado es una apuesta. El 69.3% de las empresas reporta brechas de habilidades que afectan su operación directamente, y la mayoría toma decisiones sin datos que reduzcan esa incertidumbre.",
+      "¿Tu empresa toma decisiones de crecimiento, expansión o inversión basadas principalmente en experiencia, no en datos del mercado real? ¿Los estudios que has contratado terminaron en informes que nadie usó para tomar decisiones concretas? ¿Tienes la sensación de que tus competidores leen el entorno mejor que tú, y no sabes exactamente por qué?",
+    solutionsIntro:
+      "La inteligencia de mercado solo tiene valor cuando se convierte en decisiones. En Bosón no entregamos reportes de investigación: construimos análisis diseñados para resolver una pregunta estratégica específica. ¿Vale la pena entrar a este mercado? ¿Esta inversión tiene demanda suficiente? ¿Qué está haciendo el competidor que nosotros no vemos? Cada hallazgo se traduce en acción, no en páginas de contexto.",
     solutions: [
       {
         title: "Inteligencia de mercado y análisis del entorno macro y micro",
@@ -89,7 +91,7 @@ export const services: Service[] = [
           "Análisis estructurado del entorno competitivo, tendencias sectoriales y señales del mercado que afectan las decisiones estratégicas de la organización.",
       },
       {
-        title: "Investigación competitiva y análisis del contexto empresarial",
+        title: "Investigación competitiva y señales del contexto empresarial",
         description:
           "Mapeo de la competencia, benchmarking estratégico y lectura de señales del entorno empresarial para fundamentar decisiones con precisión.",
       },
@@ -103,6 +105,16 @@ export const services: Service[] = [
         description:
           "No entregamos reportes de datos. Entregamos inteligencia accionable: análisis que clarifica opciones, reduce incertidumbre y mejora la precisión de cada decisión.",
       },
+      {
+        title: "Datos que reducen la incertidumbre en cada decisión",
+        description:
+          "Integración de la investigación al proceso de toma de decisiones de la organización. El objetivo no es tener más datos: es tomar mejores decisiones con los datos correctos.",
+      },
+    ],
+    impactItems: [
+      "Decisiones estratégicas respaldadas por inteligencia del mercado real, no por supuestos internos.",
+      "Estudios de factibilidad que reducen el riesgo de inversión antes de comprometer capital.",
+      "Un equipo directivo que opera con mayor precisión porque entiende el entorno, no solo el interior de su organización.",
     ],
     image: "/fotos-servicios/Servicio-2.jpg",
     keywords: [
