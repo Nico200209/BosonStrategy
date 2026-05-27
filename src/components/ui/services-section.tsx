@@ -84,7 +84,7 @@ function ServiceCard({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20" />
           <div className="absolute left-5 top-5 flex flex-col gap-0.5">
-            <span className="text-[11px] font-bold tracking-[0.22em] text-boson-accent">
+            <span className="text-[13px] font-black tracking-[0.22em] text-boson-accent drop-shadow-[0_1px_4px_rgba(38,192,207,0.6)]">
               {service.number}
             </span>
           </div>
@@ -123,7 +123,7 @@ export function ServicesSection() {
             initial={{ opacity: 0, y: 10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="mb-4 text-xs font-bold tracking-[0.25em] text-boson-accent uppercase"
+            className="mb-4 text-xs font-black tracking-[0.25em] text-boson-accent uppercase"
           >
             5 sistemas estratégicos de negocio — No son áreas aisladas. Son partes de un mismo sistema.
           </motion.p>
@@ -142,7 +142,7 @@ export function ServicesSection() {
             transition={{ duration: 0.55, delay: 0.2 }}
             className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-boson-body"
           >
-            Bosón interviene las cinco dimensiones que determinan si una organización puede crecer
+            Bosón Ingeniería Estratégica de Negocios interviene las cinco dimensiones que determinan si una organización puede crecer
             con consistencia. No recomendamos estrategias. Construimos los sistemas que las hacen funcionar.
           </motion.p>
         </div>

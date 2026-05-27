@@ -70,7 +70,7 @@ export function NosotrosIntroSection() {
               className="mb-6 text-4xl font-light leading-tight text-white lg:text-5xl"
             >
               No somos consultores.{" "}
-              <strong className="font-black">Somos ingenieros de negocio.</strong>
+              <strong className="font-black">Somos socios de crecimiento.</strong>
             </motion.h2>
 
             <motion.p
@@ -89,11 +89,9 @@ export function NosotrosIntroSection() {
               transition={{ duration: 0.65, delay: 0.5 }}
               className="mb-10 text-sm leading-relaxed text-white/50"
             >
-              El nombre Bosón hace referencia al Bosón de Higgs — la partícula que da masa a las
-              demás. No tiene color, no tiene carga, no se puede tocar. Pero sin el campo que
-              genera, el universo no tendría estructura. Eso es lo que Bosón interviene: la
-              ingeniería que no se ve, pero que determina si una organización tiene peso real o
-              solo movimiento.
+              Bosón existe para convertir la estrategia en ejecución consistente, desarrollando e implementando sistemas que permiten a las organizaciones operar mejor, crecer con estructura y escalar.
+              <br /><br />
+              Más que consultoría tradicional, Bosón integra estrategia, operación, inteligencia y visión sistémica para construir sistemas que funcionan en la realidad del negocio y fortalecen la capacidad de crecimiento de las organizaciones.
             </motion.p>
 
             <motion.div

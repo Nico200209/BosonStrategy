@@ -13,14 +13,14 @@ const contactInfo = [
   {
     icon: MdOutlineLocationOn,
     label: "Nuestra Ubicación",
-    value: "Santo Domingo, República Dominicana.",
+    value: "Av. Sarasota N° 55, Ensanche Bella Vista. Santo Domingo.",
     href: undefined,
   },
   {
     icon: MdOutlineEmail,
     label: "Email",
-    value: "contacto@bosonstrategy.com",
-    href: "mailto:contacto@bosonstrategy.com",
+    value: "bosoninfo@bosonstrategy.com",
+    href: "mailto:bosoninfo@bosonstrategy.com",
   },
   {
     icon: MdOutlineAccessTime,
@@ -290,14 +290,14 @@ function MapEmbed({ inView }: { inView: boolean }) {
       <div className="pointer-events-none absolute bottom-0 right-0 z-10 h-0.5 w-8 bg-boson-accent" />
 
       <iframe
-        src="https://maps.google.com/maps?q=Santo+Domingo+Dominican+Republic&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        src="https://maps.google.com/maps?q=Av.+Sarasota+55+Ensanche+Bella+Vista+Santo+Domingo+Dominican+Republic&t=&z=16&ie=UTF8&iwloc=&output=embed"
         width="100%"
         height="320"
         style={{ border: 0, display: "block", filter: "grayscale(20%)" }}
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Ubicación Bosón Ingeniería Estratégica de Negocios — Santo Domingo"
+        title="Ubicación Bosón Ingeniería Estratégica de Negocios — Av. Sarasota 55, Ensanche Bella Vista, Santo Domingo"
       />
     </motion.div>
   );

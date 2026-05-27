@@ -1,12 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaChevronRight, FaLinkedinIn } from "react-icons/fa";
+import { FaChevronRight, FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 const socialLinks = [
   {
+    icon: FaInstagram,
+    href: "https://www.instagram.com/bosonstrategy/",
+    label: "Instagram de Bosón",
+  },
+  {
+    icon: FaFacebookF,
+    href: "https://web.facebook.com/profile.php?id=61588138097886",
+    label: "Facebook de Bosón",
+  },
+  {
     icon: FaLinkedinIn,
-    href: "https://www.linkedin.com/company/boson-estrategia-negocios",
+    href: "https://www.linkedin.com/company/boson-estrategia-negocio",
     label: "LinkedIn de Bosón",
   },
 ];
@@ -16,15 +26,6 @@ export function HeroContent() {
     <>
       {/* Animated text content */}
       <div className="relative z-10 flex flex-col items-center px-6 py-24 text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-4 border-b border-boson-accent pb-2 text-xs font-bold tracking-[0.3em] text-boson-accent uppercase"
-        >
-          República Dominicana
-        </motion.p>
-
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -58,7 +59,7 @@ export function HeroContent() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-10 inline-flex items-center gap-2 rounded-full bg-boson-accent px-8 py-4 text-xs font-bold tracking-widest text-boson-primary uppercase transition-colors hover:bg-boson-accent-hover"
+          className="mt-10 inline-flex items-center gap-2 rounded-full bg-boson-accent px-8 py-4 text-xs font-bold tracking-widest text-white uppercase transition-colors hover:bg-boson-accent-hover"
         >
           Solicita una consulta estratégica
           <FaChevronRight className="h-3 w-3" />

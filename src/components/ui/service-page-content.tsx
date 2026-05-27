@@ -7,6 +7,20 @@ import { HiOutlineArrowRight } from "react-icons/hi";
 import type { Service } from "@/lib/services-data";
 import { services } from "@/lib/services-data";
 
+/* ── Icon map — light-background version (fondo claro de El Desafío) ──── */
+const serviceIconMapLight: Record<string, string> = {
+  "estrategia-de-negocios":
+    "/Recursos Gráficos/íconos/RGB - Digital/Estrategia/Estrategia-01.png",
+  "investigacion-aplicada":
+    "/Recursos Gráficos/íconos/RGB - Digital/Monitoreo/Monitoreo-01.png",
+  "excelencia-operacional":
+    "/Recursos Gráficos/íconos/RGB - Digital/Proceso/Proceso-01.png",
+  "finanzas-corporativas":
+    "/Recursos Gráficos/íconos/RGB - Digital/Finanzas/Finanzas-01.png",
+  "cultura-organizacional":
+    "/Recursos Gráficos/íconos/RGB - Digital/Team/Team-01.png",
+};
+
 /* ── Hero ──────────────────────────────────────────────────────────────── */
 function ServiceHero({ service }: { service: Service }) {
   return (
@@ -127,17 +141,21 @@ function ChallengeSection({ service }: { service: Service }) {
             </div>
           </div>
 
-          {/* Right: decorative number box */}
+          {/* Right: decorative icon box */}
           <motion.div
             initial={{ opacity: 0, scale: 0.88 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="hidden lg:flex items-center justify-center"
           >
-            <div className="relative flex h-52 w-52 items-center justify-center border border-boson-accent/20">
-              <span className="select-none text-[100px] font-black leading-none text-boson-accent/10">
-                {service.number}
-              </span>
+            <div className="relative flex h-52 w-52 items-center justify-center border border-boson-accent/20 p-10">
+              <Image
+                src={serviceIconMapLight[service.slug] ?? ""}
+                alt={service.name}
+                width={160}
+                height={160}
+                className="h-full w-full object-contain"
+              />
               {/* Corner accents */}
               <div className="absolute left-0 top-0 h-7 w-0.5 bg-boson-accent" />
               <div className="absolute left-0 top-0 h-0.5 w-7 bg-boson-accent" />
