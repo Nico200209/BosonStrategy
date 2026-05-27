@@ -131,7 +131,7 @@ export function NosotrosClient() {
                 className="mb-6 text-4xl font-light leading-tight text-white lg:text-5xl"
               >
                 No somos consultores.{" "}
-                <strong className="font-black">Somos ingenieros de negocio.</strong>
+                <strong className="font-black">Somos socios de crecimiento.</strong>
               </motion.h2>
 
               <motion.p

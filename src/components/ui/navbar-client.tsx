@@ -24,7 +24,7 @@ export function NavbarClient() {
         {/* Logo */}
         <a href="/" className="flex items-center" aria-label="Bosón — Ingeniería Estratégica de Negocios">
           <Image
-            src="/Logos/boson-logo-blanco.png"
+            src="/Logos/Logos PNG/RGB - Digital/Blanco y Negro/Blanco-03.png"
             alt="Bosón Ingeniería Estratégica de Negocios"
             width={140}
             height={40}

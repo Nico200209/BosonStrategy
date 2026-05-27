@@ -8,7 +8,7 @@ import {
   useTransform,
   animate,
 } from "framer-motion";
-import { HiOutlineChartBar, HiOutlineLightBulb, HiOutlineViewGrid } from "react-icons/hi";
+import Image from "next/image";
 
 /* ── Count-up number ───────────────────────────────────────────────── */
 function CountUp({ to, suffix, prefix }: { to: number; suffix: string; prefix?: string }) {
@@ -40,21 +40,24 @@ const values = [
     title: "Rigor Técnico",
     description:
       "No asesoramos desde afuera. Diseñamos desde adentro, con metodología probada y pensamiento sistémico. Cada modelo que construimos tiene que funcionar y sostenerse — no solo en papel, sino en la operación real.",
-    Icon: HiOutlineChartBar,
+    iconSrc: "/Recursos Gráficos/íconos/RGB - Digital/Monitoreo/Monitoreo-01.png",
+    iconAlt: "Rigor Técnico — Monitoreo",
   },
   {
     number: "02",
     title: "Inteligencia Aplicada",
     description:
       "Cada decisión tiene un sustento. La investigación de mercado, el análisis del entorno y los datos accionables no son un módulo adicional — son la base de todo lo que construimos.",
-    Icon: HiOutlineLightBulb,
+    iconSrc: "/Recursos Gráficos/íconos/RGB - Digital/Lupa/Lupa-01.png",
+    iconAlt: "Inteligencia Aplicada — Lupa",
   },
   {
     number: "03",
     title: "Visión Sistémica",
     description:
       "Estrategia, operaciones, finanzas y mercado son partes de un mismo sistema. Los intervenimos de forma integrada. No por partes, no por silos.",
-    Icon: HiOutlineViewGrid,
+    iconSrc: "/Recursos Gráficos/íconos/RGB - Digital/Proceso/Proceso-01.png",
+    iconAlt: "Visión Sistémica — Proceso",
   },
 ];
 
@@ -155,8 +158,14 @@ export function ValuesSection() {
                 </span>
 
                 {/* Icon */}
-                <div className="mb-5 inline-flex items-center justify-center rounded-sm bg-boson-primary/5 p-3">
-                  <v.Icon className="h-6 w-6 text-boson-accent" />
+                <div className="mb-5 inline-flex items-center justify-center rounded-sm bg-boson-primary/5 p-2">
+                  <Image
+                    src={v.iconSrc}
+                    alt={v.iconAlt}
+                    width={48}
+                    height={48}
+                    className="h-10 w-10 object-contain"
+                  />
                 </div>
 
                 <p className="mb-3 text-[11px] font-bold tracking-[0.22em] text-boson-accent uppercase">

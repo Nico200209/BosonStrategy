@@ -92,7 +92,7 @@ export function AboutSection() {
               transition={{ duration: 0.55, delay: 0.2 }}
               className="mb-3 text-base leading-relaxed text-white/70"
             >
-              Bosón no es una firma que opina sobre el negocio. Es una firma que
+              Bosón Ingeniería Estratégica de Negocios no es una firma que opina sobre el negocio. Es una firma que
               diseña el sistema que lo hace funcionar.
             </motion.p>
 
