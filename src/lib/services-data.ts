@@ -54,7 +54,7 @@ export const services: Service[] = [
           "Adaptación de estrategias y metodologías globales a las particularidades del contexto regional. Para organizaciones que proyectan expansión en la región.",
       },
     ],
-    image: "/fotografias/edificio-moderno.jpg",
+    image: "/fotos-servicios/Servicio-1.jpg",
     keywords: [
       "estrategia de negocios",
       "modelo de negocio",
@@ -95,7 +95,7 @@ export const services: Service[] = [
           "No entregamos reportes de datos. Entregamos inteligencia accionable: análisis que clarifica opciones, reduce incertidumbre y mejora la precisión de cada decisión.",
       },
     ],
-    image: "/fotografias/figuras.jpeg",
+    image: "/fotos-servicios/Servicio-2.jpg",
     keywords: [
       "investigación de mercado",
       "inteligencia de mercado",
@@ -136,7 +136,7 @@ export const services: Service[] = [
           "Mejora de la productividad no como reducción de costos, sino como rediseño del sistema que genera resultados con consistencia y menor dependencia de esfuerzo heroico.",
       },
     ],
-    image: "/fotografias/procesos-operacionales.jpeg",
+    image: "/fotos-servicios/Servicio-3.jpg",
     keywords: [
       "excelencia operacional",
       "optimización de procesos",
@@ -182,7 +182,7 @@ export const services: Service[] = [
           "Estructuración financiera para empresas familiares en proceso de cambio generacional. Valoración, planificación patrimonial y diseño del modelo financiero para la siguiente etapa.",
       },
     ],
-    image: "/fotografias/edificio-azul.jpeg",
+    image: "/fotos-servicios/Servicio-4.jpg",
     keywords: [
       "finanzas corporativas",
       "valoración de empresas",
@@ -228,7 +228,7 @@ export const services: Service[] = [
           "Evaluación rigurosa del estado cultural actual y su impacto en la capacidad de ejecución. Diseño del plan de transformación con métricas y mecanismos de seguimiento.",
       },
     ],
-    image: "/fotografias/oficina-blanca-2.jpeg",
+    image: "/fotos-servicios/Servicio-5.jpg",
     keywords: [
       "cultura organizacional",
       "transformación cultural",
