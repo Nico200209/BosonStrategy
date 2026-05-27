@@ -16,7 +16,7 @@ const socialLinks = [
   },
   {
     icon: FaLinkedinIn,
-    href: "https://www.linkedin.com/company/boson-estrategia-negocio",
+    href: "https://www.linkedin.com/company/boson-estrategia-negocios/",
     label: "LinkedIn de Bosón",
   },
 ];
