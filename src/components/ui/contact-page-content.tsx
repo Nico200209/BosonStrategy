@@ -3,6 +3,7 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import { HiOutlineArrowRight } from "react-icons/hi";
+import emailjs from "@emailjs/browser";
 import {
   MdOutlineEmail,
   MdOutlineLocationOn,
@@ -92,29 +93,23 @@ function ContactForm({ inView }: { inView: boolean }) {
     setErrorMsg("");
 
     const form = e.currentTarget;
-    const data = {
-      nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      empresa: (form.elements.namedItem("empresa") as HTMLInputElement).value,
-      telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
-      mensaje: (form.elements.namedItem("mensaje") as HTMLTextAreaElement).value,
-    };
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        throw new Error(body?.error ?? "Error al enviar el mensaje.");
-      }
-
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
+          email: (form.elements.namedItem("email") as HTMLInputElement).value,
+          empresa: (form.elements.namedItem("empresa") as HTMLInputElement).value,
+          telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
+          mensaje: (form.elements.namedItem("mensaje") as HTMLTextAreaElement).value,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
       setStatus("success");
-    } catch (err) {
-      setErrorMsg(err instanceof Error ? err.message : "Error inesperado. Intenta de nuevo.");
+    } catch {
+      setErrorMsg("Error al enviar el mensaje. Por favor intenta de nuevo.");
       setStatus("error");
     }
   }
