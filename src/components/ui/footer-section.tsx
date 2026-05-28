@@ -50,10 +50,15 @@ export function FooterSection() {
 
     try {
       const formUrl = process.env.NEXT_PUBLIC_MAILERLITE_FORM_URL!;
-      const body = new FormData();
+      const body = new URLSearchParams();
       body.append("fields[email]", email);
       body.append("ml-submit", "1");
-      await fetch(formUrl, { method: "POST", body });
+      body.append("anticsrf", "true");
+      await fetch(formUrl, {
+        method: "POST",
+        body,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      });
       setNewsletterStatus("success");
       setEmail("");
     } catch {
@@ -97,7 +102,7 @@ export function FooterSection() {
                 <button
                   type="submit"
                   disabled={newsletterStatus === "loading"}
-                  className="flex items-center gap-2 rounded-sm bg-boson-accent px-5 py-2.5 text-xs font-black uppercase tracking-widest text-boson-primary-dark transition-colors hover:bg-boson-accent-hover whitespace-nowrap disabled:opacity-60"
+                  className="flex items-center gap-2 rounded-sm bg-boson-accent px-5 py-2.5 text-xs font-black uppercase tracking-widest text-boson-primary-dark transition-colors hover:bg-boson-accent-hover whitespace-nowrap cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {newsletterStatus === "loading" ? "..." : "Suscribir"}
                   {newsletterStatus !== "loading" && <HiOutlineArrowRight className="h-3.5 w-3.5" />}
