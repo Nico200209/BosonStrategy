@@ -41,6 +41,25 @@ const socials = [
 
 export function FooterSection() {
   const [email, setEmail] = useState("");
+  const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  async function handleNewsletter(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!email) return;
+    setNewsletterStatus("loading");
+
+    try {
+      const formUrl = process.env.NEXT_PUBLIC_MAILERLITE_FORM_URL!;
+      const body = new FormData();
+      body.append("fields[email]", email);
+      body.append("ml-submit", "1");
+      await fetch(formUrl, { method: "POST", body });
+      setNewsletterStatus("success");
+      setEmail("");
+    } catch {
+      setNewsletterStatus("error");
+    }
+  }
 
   return (
     <footer className="bg-boson-primary-dark text-white">
@@ -56,25 +75,39 @@ export function FooterSection() {
               Recibe nuestros <strong className="font-black">análisis del mercado</strong>
             </h3>
           </div>
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="flex w-full max-w-sm items-center gap-2"
-          >
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Tu correo electrónico"
-              className="flex-1 rounded-sm border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/35 focus:border-boson-accent focus:outline-none focus:ring-0 transition-colors"
-            />
-            <button
-              type="submit"
-              className="flex items-center gap-2 rounded-sm bg-boson-accent px-5 py-2.5 text-xs font-black uppercase tracking-widest text-boson-primary-dark transition-colors hover:bg-boson-accent-hover whitespace-nowrap"
+          {newsletterStatus === "success" ? (
+            <p className="text-sm font-medium text-boson-accent">
+              ¡Listo! Te has suscrito correctamente.
+            </p>
+          ) : (
+            <form
+              onSubmit={handleNewsletter}
+              className="flex w-full max-w-sm flex-col gap-2"
             >
-              Suscribir
-              <HiOutlineArrowRight className="h-3.5 w-3.5" />
-            </button>
-          </form>
+              <div className="flex items-center gap-2">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Tu correo electrónico"
+                  required
+                  disabled={newsletterStatus === "loading"}
+                  className="flex-1 rounded-sm border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/35 focus:border-boson-accent focus:outline-none focus:ring-0 transition-colors disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={newsletterStatus === "loading"}
+                  className="flex items-center gap-2 rounded-sm bg-boson-accent px-5 py-2.5 text-xs font-black uppercase tracking-widest text-boson-primary-dark transition-colors hover:bg-boson-accent-hover whitespace-nowrap disabled:opacity-60"
+                >
+                  {newsletterStatus === "loading" ? "..." : "Suscribir"}
+                  {newsletterStatus !== "loading" && <HiOutlineArrowRight className="h-3.5 w-3.5" />}
+                </button>
+              </div>
+              {newsletterStatus === "error" && (
+                <p className="text-xs text-red-400">Error al suscribirse. Intenta de nuevo.</p>
+              )}
+            </form>
+          )}
         </div>
       </div>
 
