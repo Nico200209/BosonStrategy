@@ -34,7 +34,7 @@ export function NavbarClient() {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden items-center gap-10 md:flex">
+        <div className="hidden items-center gap-10 lg:flex">
           <a href="/" className="text-xs font-bold tracking-widest text-white/70 transition-colors hover:text-white">
             INICIO
           </a>
@@ -97,14 +97,14 @@ export function NavbarClient() {
         {/* Desktop CTA */}
         <a
           href="/contacto"
-          className="hidden items-center gap-2 rounded-sm border border-boson-accent px-4 py-2 text-[11px] font-bold tracking-widest text-boson-accent transition-colors hover:bg-boson-accent hover:text-boson-primary-dark md:flex"
+          className="hidden items-center gap-2 rounded-sm border border-boson-accent px-4 py-2 text-[11px] font-bold tracking-widest text-boson-accent transition-colors hover:bg-boson-accent hover:text-boson-primary-dark lg:flex"
         >
           CONTÁCTANOS
         </a>
 
         {/* Mobile hamburger */}
         <button
-          className="text-white md:hidden"
+          className="text-white lg:hidden"
           onClick={() => setMobileOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -117,7 +117,7 @@ export function NavbarClient() {
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col gap-1 bg-boson-primary border-t border-boson-accent px-6 py-5 md:hidden"
+          className="flex flex-col gap-1 bg-boson-primary border-t border-boson-accent px-6 py-5 lg:hidden"
         >
           <a href="/" onClick={() => setMobileOpen(false)} className="py-2 text-xs font-bold tracking-widest text-white/80 hover:text-white">
             INICIO
