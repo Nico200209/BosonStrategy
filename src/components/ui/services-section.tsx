@@ -63,6 +63,9 @@ function ServiceCard({
   index: number;
   inView: boolean;
 }) {
+  const firstSentence = service.description.split('. ')[0] + '.';
+  const shortSubtitle = service.subtitle.split(' · ').slice(0, 2).join(' · ');
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -72,7 +75,7 @@ function ServiceCard({
     >
       <a href={`/servicios/${service.slug}`} className="w-full block">
         <GlareCard
-          containerClassName="w-full [aspect-ratio:4/3]"
+          containerClassName="w-full [aspect-ratio:4/3] min-h-[280px]"
           className="relative overflow-hidden"
         >
           <Image
@@ -83,20 +86,26 @@ function ServiceCard({
             sizes="(max-width: 640px) 100vw, (max-width: 1280px) 33vw, 420px"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20" />
-          <div className="absolute left-5 top-5 flex flex-col gap-0.5">
+          <div className="absolute left-5 top-5 flex flex-col gap-0.5 z-10">
             <span className="text-[13px] font-black tracking-[0.22em] text-white drop-shadow-[0_0_6px_rgba(38,192,207,1)] [text-shadow:0_0_8px_rgba(38,192,207,0.9),0_1px_3px_rgba(0,0,0,0.8)]">
               {service.number}
             </span>
           </div>
           <div className="absolute bottom-0 left-0 right-0 p-6">
-            <p className="mb-1 text-[10px] font-medium tracking-wider text-boson-accent uppercase">
+            <p className="mb-1 text-[10px] font-medium tracking-wider text-boson-accent uppercase truncate sm:hidden lg:block">
               {service.subtitle}
+            </p>
+            <p className="mb-1 text-[10px] font-medium tracking-wider text-boson-accent uppercase truncate hidden sm:block lg:hidden">
+              {shortSubtitle}
             </p>
             <h3 className="mb-2 text-sm font-black uppercase leading-tight tracking-wide text-white">
               {service.title}
             </h3>
-            <p className="mb-4 text-xs leading-relaxed text-white/60">
+            <p className="mb-4 text-xs leading-relaxed text-white/60 sm:hidden lg:block">
               {service.description}
+            </p>
+            <p className="mb-4 text-xs leading-relaxed text-white/60 hidden sm:block lg:hidden">
+              {firstSentence}
             </p>
             <span className="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-widest text-boson-accent uppercase">
               Ver servicio
